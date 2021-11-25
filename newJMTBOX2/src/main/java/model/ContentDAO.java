@@ -346,7 +346,7 @@ public class ContentDAO {
 			
 			for(int i = 0; i<ContentList.size(); i++) {
 				
-				System.out.println(ContentList);
+				System.out.println(ContentList.get(i).getTitle());
 			}
 			System.out.println("-------------------------------------");
 		} catch (Exception e) {

@@ -43,11 +43,11 @@
 	
 	</style>
 	<script src='js/jquery/jquery-3.6.0.js'></script>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		$(document).ready(function(){
 				searchajax();
 		});
-	</script>
+	</script> -->
 	
 </head>
 <body>
@@ -57,7 +57,7 @@
 	if (vo == null) {
 		member_id = "guest";
 	} else {
-		member_id = "guest";
+		member_id = vo.getId();
 	}
 	//hot content ==> 검색하면 바꾸는걸로 바꿔야됨 이미지 나오는지 확인용!!
 	request.setCharacterEncoding("UTF-8");
@@ -208,18 +208,13 @@
 				</div>
 				<div class="search-box-make">
 					<!-- 검색 name값을 content_id로 잡아야하나?.. -->
-					<input id="#searchWord" class="search" type="text" placeholder="작품제목 및 태그 입력"
-						name="search">
-				</div>
-				<div class='row'>
-
-
-
+					<input id="searchWord" class="search" type="text" placeholder="작품제목 및 태그 입력" name="search">
 				</div>
 		</div>
 		
 
 	</section>
+
 	<!-- 우리작품이 뜨는 칸 (예시 latest-album에서가져와야되나? -->
 	<section class="section-padding-100">
 		<!-- 카테고리 -->
@@ -228,29 +223,10 @@
 		</div>
 		<div class="content-list-container">
 		
-			<div class="content-list-section">
-				<%
-				for (int i = 0; i < 10; i++) {
-				%>
-				
-				<div class="single-album2" >
-					<div class="single-album-container2">
-						<div class="img-center2">
-							<img src="<%=hlist.get(i).getC_thumbnail() %>" alt="">
-						</div>
-					</div>
-					
-					<div class="album-info2">
-					<a href="#">
-						<p><%=hlist.get(i).getTitle() %></p>
-					</a>
-					</div>
-					<input type="checkbox" id="user-choice">
-				</div>
-				
-				<%
-				}
-				%>
+			<div id= "results" class="content-list-section">
+
+
+
 			</div>
 			
 		</div>
@@ -293,7 +269,7 @@
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-<!-- Popper js -->
+	<!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -302,65 +278,58 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script>
-    
     	let m_id = "<%=member_id%>";
 		
-		let searchResult =[];
-		function searchajax(){
-			$("#searchWord").keyup(function(){
-				let words = $("#searchWord").val();
-				if(words != ''){
-					$.ajax({
-						url : 'SearchConByTitleOrTag',
-						data : {searchWords : words},
-						dataType : 'json',
-						success : function(result){
-							if(result.length>0){
+    		$("#searchWord").keydown(function(key){
+    			if(key.keyCode == 13){
+    				let searchResult =[];
+    				$("#results").empty();
+    				let words = $("#searchWord").val();
+    				console.log(words)
+    			if(words != ''){
+    				$.ajax({
+    					url : 'SearchConByTitleOrTag',
+    					data : {searchWords : words},
+    					dataType : 'json',
+    					success : function(result){
+    						if(result.length>0){
+    							
+    							for(let i = 0; i < result.length; i++){
+    		      					searchResult.push(JSON.parse(result[i]));
+    		      					}
+    							let str = ''
+    							for (let i=0; i<result.length; i++){
+    								
+    								str += '<div class="single-album2"><div class="single-album-container2"><div class="img-center2"><a href="#"><img src="'+searchResult[i].c_thumbnail+'" alt=""></a></div></div><div class="album-info2"><p>'+searchResult[i].title+'</p></div><input type="radio" id="user-choice" name="choice"></div>'
 								
-								for(let i = 0; i < result.length; i++){
-			      					searchResult.push(JSON.parse(result[i]));
-			      					}
-								let str = ''
-								for (let i=0; i<result.length; i++){
+    										
+    										
+    							}
+    							
+    							$('#results').append(str);
+    								
+    						}else{$("#results").append("");}
+    					},
+    					error : function(e){
+    						console.log('error'+e.status);
+    					}
+    				})
+    			}else{$("#results").html("")}
+    		}
+    	})
 									
 									
 									
-									
-									
-									
-									str += '<div id="results" class='single-album'>\
-									<div class="single-album-container">\
-									<div class="img-center">\
-										<a href='#'>
-										<img src="" alt=''>
-										</a>
-									</div>
-								</div>
-								<div class='album-info'>
-										<p>"hi"</p>
-								</div>
-							</div><p><img src='+searchResult[i].c_thumbnail+'></p><p>'+searchResult[i].title+'</p>';
-								}
-								$('#results').append(str);
-									
-							}else{$("#results").append("");}
-						},
-						error : function(e){
-							console.log('error'+e.status);
-						}
-					})
-				}else{$("#results").html("")}
-			});
-		}
+						
    
     
     
-    	const Searching = Search.prototype;
+    	/* const Searching = Search.prototype;
     	
     	function Search(){
     		this.keyword = document.querySelector('input[name = "search"]');
     		
-    	}
+    	} */
     </script>
 
 

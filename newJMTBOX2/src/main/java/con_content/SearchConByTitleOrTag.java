@@ -36,8 +36,8 @@ public class SearchConByTitleOrTag extends HttpServlet {
 
 		for (int i = 0; i < list.size(); i++) {
 			result.add(gson.toJson(list.get(i)));
-			out.print(result);
 		}
+		out.print(result);
 
 
 	}
