@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<%@page import="model.ReviewVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.ReviewDAO"%>
+<%@page import="model.MemberVO"%>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Title -->
+<title>My Reviews</title>
+
+<!-- Favicon -->
+<link rel="icon" href="../img/core-img/favicon.ico">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="../style.css">
+<style>
+.blog-area {
+	background: white;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.single-album {
+	width: 20% !important;
+	height: 40% !important;
+	margin-right: 2% !important;
+}
+.blog-post-thumb{
+	text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+<%
+request.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html;charset=UTF-8");
+
+MemberVO vo = (MemberVO)session.getAttribute("member");
+ReviewDAO dao = new ReviewDAO();
+ArrayList<ReviewVO> list = dao.showMyReviewList(vo.getId());
+
+%>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                       <!-- Nav brand -->
+                        <a href="main.jsp.html" class="nav-brand"><img src="../img/bg-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="../main.jsp">Home</a></li>
+                                    <li><a href="../tournament.jsp">Game</a></li>
+                                    <li><a href="../search.jsp">Search</a></li>
+                                    <%if(vo!=null){ %>
+                                    <li><a href="../myPages/myPage.jsp">My</a></li>
+                                    <%} %>
+                                </ul>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register -->
+                                    
+                                    <div class="login-register-btn mr-50">
+                                    <%if(vo==null){ %>
+                                        <a href="../login.jsp" id="loginBtn">Login / Register</a>
+                                        <%}else{%>
+                                        <a href="Logout.do" id="logoutBtn">Logout</a>
+                                        <% } %>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+	<section class="breadcumb-area bg-img bg-overlay"
+		style="background-image: url(../img/bg-img/breadcumb3.jpg);">
+		<div class="bradcumbContent">
+			<p><%=vo.getNick()%>님의</p>
+			<h2>My Review</h2>
+		</div>
+	</section>
+	<!-- ##### Breadcumb Area End ##### -->
+	
+	<!-- ##### Blog Area Start ##### -->
+	<div class="blog-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+					<%
+					if (list == null) {
+						out.print("<h2>리뷰를 작성해보세요</h2>");
+					} else {
+						for(int j=list.size()-1; j>=0; j--){
+							ReviewVO rvo = list.get(j);
+							%>
+					<!-- Single Post Start -->
+                    <div class="single-blog-post mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <!-- Post Thumb -->
+                        <div class="blog-post-thumb mt-30">
+                            <a href="../contentInfo.jsp?data=<%=rvo.getContentId()%>"><img src="<%=rvo.getcTumbnail() %>" alt=""></a>
+                            <!-- Post Date -->
+                            <div class="post-date">
+                                <span><%=rvo.getReviewDate().getDate() %></span>
+                                <span><%=rvo.getReviewDate().getMonth()+1 %>&nbsp;&nbsp;&nbsp;<%=rvo.getReviewDate().getYear()+1900 %></span>
+                            </div>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <!-- Post Title -->
+                            <a href="#" class="post-title"><%=rvo.getTag() %></a>
+                           
+                            <!-- Post Excerpt -->
+                            <p><%=rvo.getReview() %></p>
+                        </div>
+                    </div>
+				<%} %>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Blog Area End ##### -->
+
+<%} %>
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="../js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="../js/active.js"></script>
+</body>
+
+</html>

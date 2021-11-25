@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>JMTBOX - Contents is ALL in JMTBOX</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+	<style>
+	
+	</style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="img/bg-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="event.html">Game</a></li>
+                                    <li><a href="event.html">Search</a></li>
+                                </ul>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register -->
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                    </div>
+
+                                    <!-- Cart Button -->
+                                   
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+	<!-- 검색창 -->
+	<section class ="section-padding-100">
+
+		<div class="search-container">
+			<form action="movieDetail.jsp">
+				<div class="search-box">
+					<!-- 검색 name값을 content_id로 잡아야하나?.. -->
+					<input class="search-input" type="text" placeholder="Search"
+						name="search">
+					<button class="searchbtn" name = "click" onClick="location.href='movieDetail.jsp'">
+						<img class="btn-img" src="./img/bg-img/btn-img.png">
+					</button>
+				</div>
+			</form>
+		</div>
+
+
+	</section>
+	
+    <!-- ##### 영화 사진올곳 ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+        
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Elements Area Start ##### -->
+    <section class="elements-area mt-30 section-padding-100-0">
+        <div class="container">
+            <div class="row">
+
+                <!-- ========== Buttons ========== -->
+                <div class="col-12">
+                    <div class="elements-title mb-70">
+                        <h2>Buttons</h2>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="oneMusic-buttons-area mb-100">
+                        <a href="#" class="btn oneMusic-btn m-2">Send <i class="fa fa-angle-double-right"></i></a>
+                        <a href="#" class="btn oneMusic-btn btn-2 m-2">Send <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ========== Progress Bars & Accordions ========== -->
+                <div class="col-12">
+                    <div class="elements-title mb-70">
+                        <h2>Accordians &amp; Tabs</h2>
+                    </div>
+                </div>
+
+                <!-- ##### Accordians ##### -->
+                <div class="col-12 col-lg-6">
+                    <div class="accordions mb-100" id="accordion" role="tablist" aria-multiselectable="true">
+                        <!-- single accordian area -->
+                        <div class="panel single-accordion">
+                            <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Mauris gravida neque augue, euismod ultricies dui sodales ut
+                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                    </a></h6>
+                            <div id="collapseOne" class="accordion-content collapse show">
+                                <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.</p>
+                            </div>
+                        </div>
+                        <!-- single accordian area -->
+                        <div class="panel single-accordion">
+                            <h6>
+                                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Pellentesque sit amet velit a libero viverra porta non eu justo
+                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </a>
+                            </h6>
+                            <div id="collapseTwo" class="accordion-content collapse">
+                                <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.</p>
+                            </div>
+                        </div>
+                        <!-- single accordian area -->
+                        <div class="panel single-accordion">
+                            <h6>
+                                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Quisque fringilla orci lacus, ut vestibulum nisi interdum in
+                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                    </a>
+                            </h6>
+                            <div id="collapseThree" class="accordion-content collapse">
+                                <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ##### Tabs ##### -->
+                <div class="col-12 col-lg-6">
+                    <div class="oneMusic-tabs-content">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab--1" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false">Mauris gravida neque</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab--2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Pellentesque sit</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="tab--3" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true">Quisque fringilla</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mb-100" id="myTabContent">
+                            <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab--1">
+                                <div class="oneMusic-tab-content">
+                                    <!-- Tab Text -->
+                                    <div class="oneMusic-tab-text">
+                                        <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab--2">
+                                <div class="oneMusic-tab-content">
+                                    <!-- Tab Text -->
+                                    <div class="oneMusic-tab-text">
+                                        <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show active" id="tab3" role="tabpanel" aria-labelledby="tab--3">
+                                <div class="oneMusic-tab-content">
+                                    <!-- Tab Text -->
+                                    <div class="oneMusic-tab-text">
+                                        <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== Loaders ========== -->
+                <div class="col-12">
+                    <div class="elements-title mb-70">
+                        <h2>Loaders</h2>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <!-- Loaders Area Start -->
+                    <div class="our-skills-area">
+                        <div class="row">
+
+                            <!-- Single Skills Area -->
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="single-skils-area mb-100">
+                                    <div id="circle" class="circle" data-value="0.75">
+                                        <div class="skills-text">
+                                            <span>75%</span>
+                                            <p>Good Music</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Skills Area -->
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="single-skils-area mb-100">
+                                    <div id="circle2" class="circle" data-value="0.83">
+                                        <div class="skills-text">
+                                            <span>83%</span>
+                                            <p>Amazing Artists</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Skills Area -->
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="single-skils-area mb-100">
+                                    <div id="circle3" class="circle" data-value="0.25">
+                                        <div class="skills-text">
+                                            <span>25%</span>
+                                            <p>Concerts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Skills Area -->
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="single-skils-area mb-100">
+                                    <div id="circle4" class="circle" data-value="0.95">
+                                        <div class="skills-text">
+                                            <span>95%</span>
+                                            <p>Superstars</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== Milestones ========== -->
+                
+                <div class="col-12">
+                    <div class="elements-title mb-70">
+                        <h2 style='color:#ffffff;'>여기에서 볼 수 있어요</h2>
+                    </div>
+              <div class="col-12" >
+                <div class='inner'>
+                    <ul class='ul_pic'>
+                        <li class='pic'>
+                            <a href='https://www.netflix.com/kr/' target=_blank>
+                                <img class='profile' title='Newflix' src='https://images.justwatch.com/icon/207360008/s100'>
+                            </a>
+                            <p>NEXFLIX</p>
+                        </li>
+                        <li class='pic'>
+                            <a href='https://watcha.com/home' target=_blank>
+                                <img class='profile' title='watcha' src='https://www.justwatch.com/images/icon/2538290/s100'>
+                            </a>
+                            <p>WATCHA</p>
+                        </li>
+                        <li class='pic'>
+                            <a href='https://www.wavve.com/' target=_blank>
+                                <img class='profile' title='Wavve' src='https://www.justwatch.com/images/icon/155655742/s100'>
+                            </a>
+                            <p>WAVVE</p>
+                        </li>
+                        <li class='pic'>
+                            <a href='https://play.google.com/store/games?hl=en&gl=KR' target=_blank>
+                                <img class='profile' title='Google Play Movie'
+                                    src='https://www.justwatch.com/images/icon/169478387/s100'>
+                            </a>
+                            <p>GOOGLE PLAY</p>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+         	  </div>	
+
+                <!-- ========== Icon Boxes ========== -->
+                <div class="col-12">
+                    <div class="elements-title mb-70">
+                        <h2 style='color:#ffffff'>예고편, 리뷰영상</h2>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="row">	
+
+                        <!-- Single Service Area -->
+                        <div class="col-12 col-md-6">
+                            <div class="single-service-area d-flex flex-wrap mb-100">
+                                
+                                <div class="text">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/yFZh-Wqi7RI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Service Area -->
+                        <div class="col-12 col-md-6">
+                            <div class="single-service-area d-flex flex-wrap mb-100">
+                                <div class="text">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/6NmLmVfPwhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- ========== Icon Boxes ========== -->
+                <div class="col-12">
+                    <div class="elements-title mb-70">
+                        <h2 style='color:#ffffff'>리뷰</h2>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <div class="row mb-70">
+                        <section class="section-padding-100">
+
+        					<div class="movie-review">
+			            		<p class="movie-review-font">리뷰</p>
+			            
+			            <!--리뷰 입력-->
+			            
+			            <div class="movie-review-userwrite">
+			                <p>내가 쓴 리뷰</p>
+			                <form action="" >
+			                    <textarea name="" rows="7" cols="130" wrap="virtual">
+			                        짧게라도 좋아요. 작품에 대해 감상을 기록해보세요.
+			                    </textarea>
+			                    <input calss = "user-review-btn" type = "submit" value="리뷰입력">
+			                </form>
+			             </div>
+
+             <!-- 리뷰 목록 -->
+
+<!--              <article class="movie-review-list-container"> -->
+                <p>모든 리뷰 </p>
+                <div class="movie-review-list">
+                <div class='movie-inner-list1'>
+                    <div class= "user-info">
+                        <span> usernick </span>
+                        <span>　　　　　　　　　</span>
+                        <span id="b">21-11-12(일자)</span>
+                    </div>
+                    <div class="movie-rate">
+                        ❤ 3.0 
+                    </div>
+                    <div class="movie-review-contents-wrap">
+                        <a href="">
+                            <div style='color:#ffffff' class="review-content">
+                                리뷰가져와야해! a태그는 사용자가 적은 리뷰 전체를 링크타고 갈수 있게! 
+                            </div>
+                        </a>
+                        <div class="review-action-info-wrap">
+                            <span>👍 좋아요</span> <span>📑 댓글달기</span> <span>💌 공유하기</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="movie-review-list">
+                    <div class= "user-info">
+                        <span> usernick </span>
+                        <span>　　　　　　　　　</span>
+                        <span id="b">21-11-12(일자)</span>
+                    </div>
+                    <div class="movie-rate">
+                        ❤ 3.0 
+                    </div>
+                    <div class="movie-review-contents-wrap">
+                        <a href="">
+                            <div style='color:#ffffff' class="review-content">
+                                리뷰가져와야해! a태그는 사용자가 적은 리뷰 전체를 링크타고 갈수 있게! 
+                            </div>
+                        </a>
+                        <div class="review-action-info-wrap">
+                            <span>👍 좋아요</span> <span>📑 댓글달기</span> <span>💌 공유하기</span>
+                        </div>
+                    </div>
+                    
+                </div>
+				</div>
+
+
+            
+            
+        </div>
+
+
+      </section>
+                       
+                        
+                    </div>
+                </div>
+                                
+            </div>
+        </div>
+    </section>
+    <!-- ***** Elements Area End ***** -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
+                    <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Albums</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
