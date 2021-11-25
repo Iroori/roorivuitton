@@ -123,14 +123,16 @@
             </div>
         </div>
     </section>
-    <!-- ##### Login Area End ##### -->
+  
 
+  
+    
      <!-- ##### Footer Area Start ##### -->
-      <footer class="footer-area">
+    <footer class="footer-area" >
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-12 col-md-6">
-                    <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
+                    <a href="main.jsp"><img src="img/bg-img/logo.png" alt=""></a>
 
                 </div>
 
@@ -138,13 +140,7 @@
                     <div class="footer-nav">
                         <ul>
                             <li><a href="main.jsp">Home</a></li>
-                             <li><a href="#">Game</a>
-                                    		<ul class="dropdown">
-                                            <li><a href="gameAll.jsp">All game</a></li>
-                                            <li><a href="gameRanPlay.jsp">Random game</a></li>
-                                            <li><a href="gameMake.jsp">Make game</a></li>
-                                    </ul>
-                                  </li>
+                            <li><a href="gameAll.jsp">Games</a></li>
                             <li><a href="contentInfo.jsp">Search</a></li>
                         </ul>
                     </div>
@@ -152,7 +148,7 @@
             </div>
         </div>
     </footer>
-    <!-- ##### Footer Area Start ##### -->
+
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
