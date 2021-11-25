@@ -457,7 +457,57 @@ padding-left:0px !important;}
 			} else $(this).text("좋아요 !");
 		});
 		
-	});</script>
+	});
+    
+    
+		$("#searchWord").keydown(function(key){
+			if(key.keyCode == 13){
+				let searchResult =[];
+				$("#results").empty();
+				let words = $("#searchWord").val();
+				console.log(words)
+			if(words != ''){
+				$.ajax({
+					url : 'SearchConByTitleOrTag',
+					data : {searchWords : words},
+					dataType : 'json',
+					success : function(result){
+						if(result.length>0){
+							
+							for(let i = 0; i < result.length; i++){
+		      					searchResult.push(JSON.parse(result[i]));
+		      					}
+							let str = ''
+							for (let i=0; i<result.length; i++){
+								
+								str += '<div class="single-album2"><div class="single-album-container2"><div class="img-center2"><a href="#"><img src="'+searchResult[i].c_thumbnail+'" alt=""></a></div></div><div class="album-info2"><p>'+searchResult[i].title+'</p></div><input type="radio" id="user-choice" name="choice"></div>'
+							
+										
+										
+							}
+							
+							$('#results').append(str);
+								
+						}else{$("#results").append("");}
+					},
+					error : function(e){
+						console.log('error'+e.status);
+					}
+				})
+			}else{$("#results").html("")}
+		}
+	})
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
 </body>
 
 </html>

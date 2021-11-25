@@ -165,6 +165,53 @@
     <!-- ##### Breadcumb Area End ##### -->
      
      
+     
+     
+     <!-- 검색창 줄여어어어 -->
+	<section class ="section-padding-100">
+
+		<div class="search-container2">
+				<div class="make-font">
+					<h2>작품 검색</h2>
+				</div>
+				<div class="search-box-make">
+					<!-- 검색 name값을 content_id로 잡아야하나?.. -->
+					<input id="searchWord" class="search" type="text" placeholder="작품제목 및 태그 입력" name="search">
+				</div>
+		</div>
+		
+
+	</section>
+
+	<!-- 우리작품이 뜨는 칸 (예시 latest-album에서가져와야되나? -->
+	<section class="section-padding-100">
+		<!-- 카테고리 -->
+		<div class="content-list-container">
+		
+			<div id= "results" class="content-list-section">
+
+
+
+			</div>
+			
+		</div>
+
+	</section>
+     
+     
+     
+        <!-- 검색창 끝 -->
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
     <!-- ##### Album Catagory Area Start ##### -->
     <section id="flatform" class="album-catagory section-padding-100-0">
         <div class="container">
@@ -279,6 +326,50 @@
                     filter: filterValue
                 });
     	 });   
+   		
+   		//------검색------------------------------------------------------------------------------
+ 		$("#searchWord").keydown(function(key){
+			if(key.keyCode == 13){
+				let searchResult =[];
+				$("#results").empty();
+				let words = $("#searchWord").val();
+				console.log(words)
+			if(words != ''){
+				$.ajax({
+					url : 'SearchConByTitleOrTag',
+					data : {searchWords : words},
+					dataType : 'json',
+					success : function(result){
+						if(result.length>0){
+							
+							for(let i = 0; i < result.length; i++){
+		      					searchResult.push(JSON.parse(result[i]));
+		      					}
+							let str = ''
+							for (let i=0; i<result.length; i++){
+								
+								str += '<div class="single-album2"><div class="single-album-container2"><div class="img-center2"><a href="contentInfo.jsp?content_id='+searchResult[i].content_id+'"><img src="'+searchResult[i].c_thumbnail+'" alt=""></a></div></div><div class="album-info2"><p>'+searchResult[i].title+'</p></div></div>'
+							
+										
+										
+							}
+							
+							$('#results').append(str);
+								
+						}else{$("#results").append("");}
+					},
+					error : function(e){
+						console.log('error'+e.status);
+					}
+				})
+			}else{$("#results").html("")}
+		}
+	})
+   		
+   		
+   		
+   		
+   		
     </script>
 </body>
 
