@@ -17,7 +17,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>One Music - Modern Music HTML5 Template</title>
+    <title>JMTBOX - Contents is ALL in JMTBOX</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -95,7 +95,7 @@
                     <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
                         <!-- Nav brand -->
-                        <a href="main.jsp" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="main.jsp" class="nav-brand"><img src="img/bg-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -259,7 +259,7 @@
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-12 col-md-6">
-                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
+                    <a href="#"><img src="img/bg-img/logo.png" alt=""></a>
                     
                 </div>
 
