@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.smhrd.mapper.BoardMapper">
+    <!--  메서드의 이름 -->      <!-- resultType = VO 쪽   -->
+  <select id="boardList" resultType="kr.smhrd.domain.Board">
+    select * from python_board order by idx desc
+  </select>
+  <insert id="boardInsert" parameterType="kr.smhrd.domain.Board">
+    insert into python_board (userId,title,contents,writer)
+    values(#{userId},#{title},#{contents},#{writer})
+  </insert>
+  <select id="boardContent" resultType="kr.smhrd.domain.Board" parameterType="int">
+    select * from python_board where idx=#{idx}
+  </select>
+  <insert id="join" parameterType="kr.smhrd.domain.Board">
+    insert into pop_user (userId,userPwd,userName)
+    values(#{userId},#{userPwd},#{userName})
+  </insert>
+ 
+  
+  
+  
+  
+  <!-- 
+  <update id="boardUpdate" parameterType="kr.smhrd.domain.Board">
+      update Board set title=#{title},contents=#{contents} where idx=#{idx}
+  </update>
+   -->
+  
+  
+  
+</mapper>
