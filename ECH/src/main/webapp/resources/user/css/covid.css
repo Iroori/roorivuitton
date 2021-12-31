@@ -1,0 +1,130 @@
+@charset "EUC-KR";
+
+
+* {margin:0; padding:0; box-sizing:border-box;}
+ol, ul { list-style:none; padding:0; margin:0 }
+a { text-decoration:none; color:#666 }
+body, html {width:100%; height:100%;}
+
+
+#map_header {position:relative; height:100px; border-bottom:1px solid #ddd; background-color:#284aaa;}
+#map_header .logo {float:left; padding:15px 0 0 20px;}
+#map_header .header_text {float:left; padding: 20px 0 0 20px; color:#fff;}
+#map_header .header_text span {}
+#map_header .header_text02 {clear: both; padding-left: 20px; color: #fff;}
+
+#map_left {position:absolute; top:120px; left:20px; background-color:#fff; overflow-y:auto; z-index:500; width:210px; border-radius:10px; border:1px solid #ccc; }
+#map_left p {font-weight:bold; border-bottom:1px solid #ccc; padding:10px 10px 5px 10px; cursor: pointer;}
+#map_left ul {padding:5px 0 10px;}
+#map_left li {padding:5px; border-bottom:1px dotted #ccc; font-size:95%;}
+#map_left li a {display:block;}
+#map_left li.p29 {background:url(https://www.gwangju.go.kr/home/www/images/corona/marker_29.png) no-repeat; background-size:15px; padding-left:28px; background-position:7px 4px;}
+#map_left li.p08 {background:url(https://www.gwangju.go.kr/home/www/images/corona/marker_08.png) no-repeat; background-size:15px; padding-left:28px; background-position:7px 8px;}
+#map_left li.p05 {background:url(https://www.gwangju.go.kr/home/www/images/corona/marker_05.png) no-repeat; background-size:15px; padding-left:28px; background-position:7px 8px;}
+#map_left li.p04 {background:url(https://www.gwangju.go.kr/home/www/images/corona/marker_04.png) no-repeat; background-size:15px; padding-left:28px; background-position:7px 8px;}
+#map_left li.p18 {background:url(https://www.gwangju.go.kr/home/www/images/corona/marker_18.png) no-repeat; background-size:15px; padding-left:28px; background-position:7px 8px;}
+#map_left li.p27 {background:url(https://www.gwangju.go.kr/home/www/images/corona/marker_27.png) no-repeat; background-size:15px; padding-left:28px; background-position:7px 8px;}
+
+.left_gosisul {position:absolute; top:410px; left:20px; overflow-y:auto; z-index:500; }
+.left_gosisul a {display:block; color:#fff; width:210px; border-radius:5px; background: url(https://www.gwangju.go.kr/home/www/images/corona/marker_40.png) no-repeat #073a6e 5px 4px; background-size: 28px; padding:8px 0 10px 38px; font-weight:bold;}
+
+
+.mapSearch {}
+.selectbox label {position:absolute;overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+.selectbox select {width:95%; border:0; padding:3px 5px 6px; border:1px solid #999; line-height:24px; border-radius:5px;}
+
+#map {width:100%; height:100%; position:relative; overflow:hidden;}
+
+#map > div > div > div > div{width:185px !important;height:auto !important}
+#map > div > div > div > div > div:nth-child(2){position:relative !important;}
+
+.map_box {
+    z-index:100;
+    padding-bottom:10px;
+}
+
+.map_box .title {
+    padding: 10px;
+    min-height: 30px;
+    border-bottom: 1px solid #ccc;
+	background-color:#f7f7f7;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif !important;
+    align-items: center;
+    width:100%;
+}
+
+.map_box .body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    padding: 5px 10px 0 10px;
+    width:100%;
+	letter-spacing:-0.08em;
+}
+
+.hidebox {display: block;}
+
+.btn_hide {background:none;}
+
+
+@media all and (max-width:1046px){
+	#map_header .logo {width:100%;}
+
+	#map_header {height:160px;}
+	#map_header .header_text {float:left; padding: 0 0 0 78px; color:#fff;}
+  	#map_left {top: 180px;}
+  	.left_gosisul {top: 470px;}
+	#map_header .header_text02 {padding-left: 78px;}
+}
+
+.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'µ¸¿ò',sans-serif;font-size:12px;}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+.map_wrap {position:relative;width:100%;height:200px;}
+#menu_wrap {position:absolute;top:430px;left:10px; width:210px; height:350px; margin:30px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 1);z-index: 2;font-size:12px;border-radius: 10px;}
+#menu_wrap input {padding:3px; width:140px; border:1px solid #222; line-height: 24px;}
+#menu_wrap button {border:1px solid #222; background: #222; color:#fff; padding:3px; line-height:20px;}
+.bg_white {background:#fff;}
+#menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}
+#menu_wrap .option button {margin-left:5px;}
+#placesList li {list-style: none;}
+#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+#placesList .item span {display: block;margin-top:4px;}
+#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#placesList .item .info{padding:10px;}
+#placesList .info .gray {color:#8a8a8a;}
+#placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+#placesList .info .tel {color:#009900;}
+#placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
+#placesList .item .marker_1 {background-position: 0 -10px;}
+#placesList .item .marker_2 {background-position: 0 -56px;}
+#placesList .item .marker_3 {background-position: 0 -102px}
+#placesList .item .marker_4 {background-position: 0 -148px;}
+#placesList .item .marker_5 {background-position: 0 -194px;}
+#placesList .item .marker_6 {background-position: 0 -240px;}
+#placesList .item .marker_7 {background-position: 0 -286px;}
+#placesList .item .marker_8 {background-position: 0 -332px;}
+#placesList .item .marker_9 {background-position: 0 -378px;}
+#placesList .item .marker_10 {background-position: 0 -423px;}
+#placesList .item .marker_11 {background-position: 0 -470px;}
+#placesList .item .marker_12 {background-position: 0 -516px;}
+#placesList .item .marker_13 {background-position: 0 -562px;}
+#placesList .item .marker_14 {background-position: 0 -608px;}
+#placesList .item .marker_15 {background-position: 0 -654px;}
+#pagination {margin:10px auto;text-align: center;}
+#pagination a {display:inline-block;margin-right:10px;}
+#pagination .on {font-weight: bold; cursor: default;color:#777;}
+
+
+@media all and (max-width:768px){
+	#map_header {display: none;}
+  .map_group { position: absolute; top: 10px; left: 10px;}
+  #map_left {position:relative; top: 0; left: 0;}
+  .left_gosisul {position:relative; top: 0; left: 0; margin-top: 10px;}
+	.hidebox {display: none;}
+	.btn_hide {background:url(https://www.gwangju.go.kr/home/www/images/corona/hide_arrow.png) 180px center no-repeat; background-size: 15px;}
+	#menu_wrap {position:absolute;top:280px;left:0; width:210px; height:200px;}
+}

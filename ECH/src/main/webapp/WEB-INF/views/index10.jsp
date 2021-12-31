@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -14,6 +19,7 @@
     
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="resources/user/css/template-style.css">
+    <link rel="stylesheet" href="resources/user/css/button.css">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
     <script type="text/javascript" src="resources/user/js/jquery-1.8.3.min.js"></script>
@@ -110,74 +116,68 @@
       <!-- Section 2 -->
       <section class="section-top-padding background-white">
         <div class="line text-center">
-          <i class="icon-sli-heart text-primary text-size-40"></i>
-          <h2 class="text-dark text-size-50 text-m-size-40">Template <b>Features</b></h2>
+        	
+         <i class="icon-sli-heart text-primary text-size-40"></i>
+          
+          <h2 class="text-dark text-size-50 text-m-size-40">확진자 <b>이동경로</b></h2>
+          <button class="large button10"><a href="index11">확진자 동선 지도보기</a></button>
+        	
+         <!-- 
           <hr class="break background-primary break-small break-center margin-bottom-50">
+           -->
         </div>
-        <div class="line">
+        
+         
+          
+          <div class="line">
           <div class="margin2x">
-            <div class="s-12 m-6 l-4 margin-bottom-60">
-              <div class="float-left">
-                <i class="icon-sli-equalizer text-primary text-size-40 text-line-height-1"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">Unlimited Color Variants</h3>
-                <p>Hendrerit in vulputate duis autem vel eum iriure dolor in velit esse molestie consequat, vel illum dolore nulla facilisis</p>
-                <a class="text-more-info text-primary" href="/">Read more</a>                
-              </div>
-            </div>
-            <div class="s-12 m-6 l-4 margin-bottom-60">
-              <div class="float-left">
-                <i class="icon-sli-layers text-primary text-size-40 text-line-height-1"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">Many Reusable Elements</h3>
-                <p>Hendrerit in vulputate duis autem vel eum iriure dolor in velit esse molestie consequat, vel illum dolore nulla facilisis</p>
-                <a class="text-more-info text-primary" href="/">Read more</a>                
-              </div>
-            </div>
-            <div class="s-12 m-6 l-4 margin-bottom-60">
-              <div class="float-left">
-                <i class="icon-sli-share text-primary text-size-40 text-line-height-1"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">Clean Modern Code</h3>
-                <p>Hendrerit in vulputate duis autem vel eum iriure dolor in velit esse molestie consequat, vel illum dolore nulla facilisis</p>
-                <a class="text-more-info text-primary" href="/">Read more</a>                 
-              </div>
-            </div>
-            <div class="s-12 m-6 l-4 margin-m-bottom-60">
-              <div class="float-left">
-                <i class="icon-sli-paper-plane text-primary text-size-40 text-line-height-1"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">Parallax Background</h3>
-                <p>Hendrerit in vulputate duis autem vel eum iriure dolor in velit esse molestie consequat, vel illum dolore nulla facilisis</p>
-                <a class="text-more-info text-primary" href="/">Read more</a>                 
-              </div>
-            </div>
-            <div class="s-12 m-6 l-4 margin-m-bottom-60">
-              <div class="float-left">
-                <i class="icon-sli-diamond text-primary text-size-40 text-line-height-1"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">Responsive Layoute</h3>
-                <p>Hendrerit in vulputate duis autem vel eum iriure dolor in velit esse molestie consequat, vel illum dolore nulla facilisis</p>
-                <a class="text-more-info text-primary" href="/">Read more</a>                 
-              </div>
-            </div>
-            <div class="s-12 m-6 l-4 margin-m-bottom-60">
-              <div class="float-left">
-                <i class="icon-sli-rocket text-primary text-size-40 text-line-height-1"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">And many more...</h3>
-                <p>Hendrerit in vulputate duis autem vel eum iriure dolor in velit esse molestie consequat, vel illum dolore nulla facilisis</p>
-                <a class="text-more-info text-primary" href="/">Read more</a>                 
-              </div>
-            </div>
+           <div class="s-12 m-12 l-12 margin-m-bottom-60">
+              
+              <div class="margin-left-10">
+              <table class="tb_default">
+				<caption>이표는 시도,시군구,장소유형,상호명,주소,노출일시,소독여부를 안내하는 표입니다</caption>
+					<!--<colgroup>
+						<col style="width:20%">
+						<col style="width:10%">
+						<col style="width:10%">
+						<col style="width:10%">
+						<col style="width:20%">
+						<col style="width:20%">
+						<col style="width:10%">
+					</colgroup>-->
+					<thead>
+						<tr>
+							<th class="route_th1">노출일시</th>
+							<th class="route_th2">시</th>
+							<th class="route_th3">구</th>
+							<th class="route_th4">장소유형</th>
+							<th class="route_th5">상호명</th>
+							<th class="route_th6">주소</th>
+							<th class="route_th7">소독여부</th>
+						</tr>
+					</thead>
+					<tbody id="co_table">
+						<tr>
+							<td>12.27.(월)~12.29.(수)</td>
+							<td>광주</td>
+							<td>서구</td>
+							<td>판매점</td>
+							<td>금탑금은방</td>
+							<td>서구 상무대로 1062</td>
+							<td>소독완료</td>
+						</tr>
+			
+					</tbody>
+				</table>
+             
+              
+              
+                             
+              </div>                    
+            </div>          
           </div>
         </div>
+        
       </section>
       
       <!-- Section 3 -->
