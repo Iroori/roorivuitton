@@ -21,12 +21,17 @@
     <link rel="stylesheet" href="resources/user/css/template-style.css">
     <link rel="stylesheet" href="resources/user/css/button.css">
     
+    <link rel="stylesheet" type="text/css" href="resources/user/css/normalize.css" />
+
+	<link rel="stylesheet" type="text/css" href="resources/user/css/demo.css" />
+    
    
     
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
     <script type="text/javascript" src="resources/user/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="resources/user/js/jquery-ui.min.js"></script>   
+    <script type="text/javascript" src="resources/user/js/jquery-ui.min.js"></script>
+    <script src="resources/user/js/modernizr.custom.js"></script>   
   </head>
 
   <body class="size-1280">
@@ -285,21 +290,119 @@
         </div>       
       </section>
       
-      <!-- Section 4 -->
-      <section class="background-primary full-width">        
-        <div class="m-12 l-6 xl-5 xxl-4">
-          <img class="full-img" src="resources/user/img/img-02.jpg"/>
-        </div>         
-        <div class="m-12 l-6 xl-7 xxl-8">
-          <div class="l-12 xl-11 xxl-8 padding-2x">
-            <h2 class="text-l-size-40 text-size-50 text-white">Always <b>Nearby</b></h2>
-            <p class="margin-bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
-            <!-- white Start your Business object -->
-            <img class="margin-left-20 margin-top-30 margin-bottom-60" src="resources/user/img/start-your-business.svg" alt="">
-          </div>  
-        </div>
-      </section>
+    
+   
+      
+      
+      <div class="container">
+		
+			<div class="content">
+				<div class="mockup-browser">
+					<header class="mockup-header mockup-section--dark paint-area">
+						<div class="mockup-content mockup-grid mockup-grid--spread">
+							 <div class="line text-center">
+					          <p class="text-primary text-size-20">Lorem ipsum dolor sit amet</p>
+					          <h2 class="mockup-heading__subline text-dark text-size-50 text-m-size-40">거리두기  <b>최신화 정책</b></h2>
+					          <i class="icon-chevron_down text-primary margin-bottom-50 text-size-20"></i> 
+					        </div> 
+							<nav class="mockup-nav paint-area paint-area--text">
+								<span>About</span>
+								<span>Solutions</span>
+								<span>Pricing</span>
+								<span>Contact</span>
+							</nav>
+						</div>
+					</header>				
+				
+				
+				
+					
+					
+					<section class="mockup-section paint-area">
+						<div class="mockup-content mockup-grid">
+							<div class="mockup-grid__item mockup-width--half">
+								<h1 class="mockup-heading mockup-heading--large paint-area paint-area--text">We help tell your brand's story <span class="mockup-heading__subline">The most efficient toolset for businesses</span></h3>
+								<button class="mockup-button paint-area"><span>Discover more</span> <i class="fa fa-chevron-right"></i></button>
+							</div>
+							<figure class="mockup-grid__item mockup-width--half">
+								<div class="mockup-img mockup-img--large">
+									<i class="fa fa-picture-o"></i>
+								</div>
+							</figure>
+						</div><!-- /mockup-grid -->
+					</section>
+					
+					
+					<section class="mockup-section mockup-section--dark paint-area">
+						<div class="mockup-content mockup-grid">
+							<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">Our philosophy</h2>
+							<figure class="mockup-grid__item mockup-width--half">
+								<div class="mockup-img mockup-img--large"><i class="fa fa-picture-o"></i></div>
+							</figure>
+							<div class="mockup-grid__item mockup-width--half">
+								<p class="paint-area paint-area--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<button class="mockup-button paint-area"><span>Read more</span> <i class="fa fa-chevron-right"></i></button>
+							</div>
+						</div><!-- /mockup-grid -->
+					</section>
+					
+					
+					<section class="mockup-section paint-area">
+						<div class="mockup-content mockup-grid">
+							<h2 class="mockup-heading mockup-heading--single paint-area paint-area--text">Meet the amazing team</h2>
+							<figure class="mockup-grid__item mockup-width--forth">
+								<div class="mockup-img"><i class="fa fa-user"></i></div>
+								<figcaption class="mockup-caption"><h3 class="paint-area paint-area--text">Jerry McIntosh</h3></figcaption>
+							</figure>
+							<figure class="mockup-grid__item mockup-width--forth">
+								<div class="mockup-img"><i class="fa fa-user"></i></div>
+								<figcaption class="mockup-caption"><h3 class="paint-area paint-area--text">Ben McLovin</h3></figcaption>
+							</figure>
+							<figure class="mockup-grid__item mockup-width--forth">
+								<div class="mockup-img"><i class="fa fa-user"></i></div>
+								<figcaption class="mockup-caption"><h3 class="paint-area paint-area--text">Sarah Connor</h3></figcaption>
+							</figure>
+							<figure class="mockup-grid__item mockup-width--forth">
+								<div class="mockup-img"><i class="fa fa-user"></i></div>
+								<figcaption class="mockup-caption"><h3 class="paint-area paint-area--text">Fred Guhlman</h3></figcaption>
+							</figure>
+						</div><!-- /mockup-grid -->
+					</section>
+					
+					
+					
+				</div><!-- /mockup-browser -->
+			</div><!-- /content -->
+			
+			
+			<div class="customizer">
+				<ul class="color-tool">
+					<li class="color-1"><div class="drag-element" data-color="#333"><div class="drop color-1"></div><i class="drop-helper-1 color-1"></i><i class="drop-helper-2 color-1"></i><i class="drop-helper-3 color-1"></i><i class="drop-helper-4 color-1"></i></div></li>
+					<li class="color-2"><div class="drag-element" data-color="#f0f0f0"><div class="drop color-2"></div><i class="drop-helper-1 color-2"></i><i class="drop-helper-2 color-2"></i><i class="drop-helper-3 color-2"></i><i class="drop-helper-4 color-2"></i></div></li>
+					<li class="color-3"><div class="drag-element" data-color="#c0c3d5"><div class="drop color-3"></div><i class="drop-helper-1 color-3"></i><i class="drop-helper-2 color-3"></i><i class="drop-helper-3 color-3"></i><i class="drop-helper-4 color-3"></i></div></li>
+					<li class="color-4"><div class="drag-element" data-color="#5FA1E0"><div class="drop color-4"></div><i class="drop-helper-1 color-4"></i><i class="drop-helper-2 color-4"></i><i class="drop-helper-3 color-4"></i><i class="drop-helper-4 color-4"></i></div></li>
+					<li class="color-5"><div class="drag-element" data-color="#C1D5C0"><div class="drop color-5"></div><i class="drop-helper-1 color-5"></i><i class="drop-helper-2 color-5"></i><i class="drop-helper-3 color-5"></i><i class="drop-helper-4 color-5"></i></div></li>
+					<li class="color-6"><div class="drag-element" data-color="#47AE73"><div class="drop color-6"></div><i class="drop-helper-1 color-6"></i><i class="drop-helper-2 color-6"></i><i class="drop-helper-3 color-6"></i><i class="drop-helper-4 color-6"></i></div></li>
+					<li class="color-7"><div class="drag-element" data-color="#EAE7C4"><div class="drop color-7"></div><i class="drop-helper-1 color-7"></i><i class="drop-helper-2 color-7"></i><i class="drop-helper-3 color-7"></i><i class="drop-helper-4 color-7"></i></div></li>
+					<li class="color-8"><div class="drag-element" data-color="#FB6964"><div class="drop color-8"></div><i class="drop-helper-1 color-8"></i><i class="drop-helper-2 color-8"></i><i class="drop-helper-3 color-8"></i><i class="drop-helper-4 color-8"></i></div></li>
+					<li><button class="reset-button" title="Reser colors">Reset colors</button></li>
+				</ul>
+			</div>
+			<!-- Related demos -->
+			
+			
+		</div><!-- /container -->
+      
+      
+      
+      
+      
+      
       
       <!-- Section 5 -->
       <section class="section-small-padding background-grey">   
@@ -427,12 +530,21 @@
     <script type="text/javascript" src="resources/user/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="resources/user/js/template-scripts.js"></script> 
     
+    <script src="resources/user/js/classie.js"></script>
+	<script src="resources/user/js/interact-1.2.4.min.js"></script>
+	<script src="resources/user/js/main.js"></script>
+    
+    
+    
+    
+    
     <script>
     $(".move").click(function(){
     	
-    	if($("#Route").css("display")=="none"){					
+    	if($("#Route").css("display")=="none" ){
+    		$("#situation").css("display","none");
 			$("#Route").css("display","block");
-			$("#situation").css("display","none");
+			
 		}else{					
 			$("#Route").css("display","none");
 			
@@ -441,9 +553,10 @@
     
     $(".current").click(function(){
     	
-    	if($("#situation").css("display")=="none"){					
+    	if($("#situation").css("display")=="none"){
+    		$("#Route").css("display","none");
 			$("#situation").css("display","block");
-			$("#Route").css("display","none");
+			
 		}else{					
 			$("#situation").css("display","none");
 			
