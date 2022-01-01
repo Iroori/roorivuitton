@@ -44,6 +44,11 @@ public class BoardController {
 			return "index11";
 		}
 		
+		@RequestMapping("/report")
+		public String index12() {
+			return "index12";
+		}
+		
 		@RequestMapping("/index")
 		public String index() {
 			return "index";		

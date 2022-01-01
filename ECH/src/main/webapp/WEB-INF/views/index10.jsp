@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="resources/user/css/template-style.css">
     <link rel="stylesheet" href="resources/user/css/button.css">
     
+   
+    
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
     <script type="text/javascript" src="resources/user/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="resources/user/js/jquery-ui.min.js"></script>   
@@ -66,14 +69,11 @@
           <div class="top-nav right-menu">
              <ul class="top-ul chevron">
                 <li>
-                  <a>Products</a>
-                  <ul>
-                    <li><a>Product 1</a></li>
-                    <li><a>Product 2</a></li>
-                  </ul>
+                  <a href="report">신고</a>
+                  
                 </li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">마스크</a></li>
+                <li><a href="login">로그인</a></li>
                 <li><a href="index">index</a></li>
              </ul> 
           </div>
@@ -116,35 +116,73 @@
       <!-- Section 2 -->
       <section class="section-top-padding background-white">
         <div class="line text-center">
-        	
+        	<div class="covid ">
+				<button class="current">확진자 현황</button>
+				<button class="move">확진자 이동 경로</button>
+			</div>
+        </div>        
+        
+        <div id="situation" class="line text-center" style="display:none">
          <i class="icon-sli-heart text-primary text-size-40"></i>
-          
+         
+          <h2 class="text-dark text-size-50 text-m-size-40">확진자 <b>현황</b></h2>          
+        	
+         <!-- 
+          <hr class="break background-primary break-small break-center margin-bottom-50">
+           -->
+        
+          <div class="line" >
+          <div class="margin2x">
+           <div class="s-12 m-12 l-12 margin-m-bottom-60">
+              
+              <div class="margin-left-10">
+              <table class="tb_default">
+				<caption>이표는 시도,시군구,장소유형,상호명,주소,노출일시,소독여부를 안내하는 표입니다</caption>				
+					<thead>
+						<tr>
+							<th class="route_th1">확진자번호</th>
+							<th class="route_th2">거주지</th>
+							<th class="route_th3">감염경로</th>
+							<th class="route_th4">확진일</th>
+							<th class="route_th5">격리시설</th>							
+						</tr>
+					</thead>
+					<tbody id="co_table">
+						<tr>
+							<td>광주8112</td>
+							<td>광주 서구</td>
+							<td>광주 7962(조사중) 접촉</td>
+							<td>12월 31일</td>
+							<td>병상 배정중</td>							
+						</tr>			
+					</tbody>
+				</table>
+                                          
+              </div>                    
+            </div>          
+          </div>
+        </div>
+        </div>
+        
+        
+        
+        <div id="Route" class="line text-center" style="display:none">
+         <i class="icon-sli-heart text-primary text-size-40"></i>
+         
           <h2 class="text-dark text-size-50 text-m-size-40">확진자 <b>이동경로</b></h2>
           <button class="large button10"><a href="index11">확진자 동선 지도보기</a></button>
         	
          <!-- 
           <hr class="break background-primary break-small break-center margin-bottom-50">
            -->
-        </div>
         
-         
-          
-          <div class="line">
+          <div class="line" >
           <div class="margin2x">
            <div class="s-12 m-12 l-12 margin-m-bottom-60">
               
               <div class="margin-left-10">
               <table class="tb_default">
-				<caption>이표는 시도,시군구,장소유형,상호명,주소,노출일시,소독여부를 안내하는 표입니다</caption>
-					<!--<colgroup>
-						<col style="width:20%">
-						<col style="width:10%">
-						<col style="width:10%">
-						<col style="width:10%">
-						<col style="width:20%">
-						<col style="width:20%">
-						<col style="width:10%">
-					</colgroup>-->
+				<caption>이표는 시도,시군구,장소유형,상호명,주소,노출일시,소독여부를 안내하는 표입니다</caption>					
 					<thead>
 						<tr>
 							<th class="route_th1">노출일시</th>
@@ -170,21 +208,19 @@
 					</tbody>
 				</table>
              
-              
-              
                              
               </div>                    
             </div>          
           </div>
         </div>
-        
+        </div>
       </section>
-      
+      <br><br>
       <!-- Section 3 -->
       <section class="section background-white">      
         <div class="line text-center">
           <p class="text-primary text-size-20">Lorem ipsum dolor sit amet</p>
-          <h2 class="text-dark text-size-50 text-m-size-40">Responsive <b>Components</b></h2>
+          <h2 class="text-dark text-size-50 text-m-size-40">거리두기  <b>최신화 정책</b></h2>
           <i class="icon-chevron_down text-primary margin-bottom-50 text-size-20"></i> 
         </div> 
         
@@ -390,5 +426,40 @@
     <script type="text/javascript" src="resources/user/js/responsee.js"></script>
     <script type="text/javascript" src="resources/user/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="resources/user/js/template-scripts.js"></script> 
+    
+    <script>
+    $(".move").click(function(){
+    	
+    	if($("#Route").css("display")=="none"){					
+			$("#Route").css("display","block");
+			$("#situation").css("display","none");
+		}else{					
+			$("#Route").css("display","none");
+			
+		}	
+    })
+    
+    $(".current").click(function(){
+    	
+    	if($("#situation").css("display")=="none"){					
+			$("#situation").css("display","block");
+			$("#Route").css("display","none");
+		}else{					
+			$("#situation").css("display","none");
+			
+		}	
+    })       
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   </body>
 </html>

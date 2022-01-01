@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.covid:after {content: ''; display: block; clear:both; }
+.covid button {float:left; width:49.5%; margin:0 0.5% 5px 0; text-align: center; background-color:#fff; border:1px solid #ccc; color:#111;}
+
+.covid button {display:block; color:#111; font-weight: bold; padding:20px 0;}
+
+.covid button:hover {border:1px solid #496baa; color:#11367a;}
+
 
 .button10::-moz-focus-inner{
   border: 0;

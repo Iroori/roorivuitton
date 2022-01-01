@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virtua - New Amazing HTML5 Template</title>
-    <link rel="stylesheet" href="resources/user/css/covid.css">
+     <link rel="stylesheet" href="resources/user/css/covid.css">
     <link rel="stylesheet" href="resources/user/css/components.css">
     <link rel="stylesheet" href="resources/user/css/icons.css">
     <link rel="stylesheet" href="resources/user/css/responsee.css">
@@ -20,12 +20,17 @@
     
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="resources/user/css/template-style.css">
+    
+  
    
  
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
     <script type="text/javascript" src="resources/user/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="resources/user/js/jquery-ui.min.js"></script>   
+    
+    
+    
   </head>
 
   <body class="size-1280">
@@ -114,187 +119,187 @@
           </div>                                                                                               
         </div>       
       </section>
-      <br><br><br><br>
+     
       <!-- Section 2 -->
       <section class="section-bottom-padding background-white">
         <div class="line text-center">
         	
         <div id="map_header">
-	<div class="logo"><a href="#"><img src="https://www.gwangju.go.kr/home/www/images/corona/map_toptitle.png" alt=""></a></div>
-	<div class="header_text">
-		<span><strong>확진환자</strong> : <strong>7,822</strong>명</span>
-		(치료중 689명,
-		격리해제 7,094명,
-		사망 39명) &nbsp; &nbsp;
-		<span><br><strong>접촉자</strong> : <strong>122,188</strong>명</span>
-		(격리 4,668명,
-		해제 117,520명)
-	</div>
-	<div class="header_text02">
-		※ 확진자가 마지막 접촉자와 접촉한 날로부터 14일이 경과되거나, 확진자와의 전체 접촉자가 파악 완료된 장소는 지도상에 표시되지 않습니다.
-	</div>
-</div>
-<div class="map_group">
-	<div id="map_left">
-		<p class="btn_hide"><a href="javascript:void(0)" data-pid="06">확진자 이동경로</a></p>
-		<ul class="hidebox showYn">
-			<li class="p29"><a href="javascript:location.reload();" class="all" data-pid="06">광주 전체 보기</a></li>
-			<li class="p08">
-				<div class="mapSearch">
-					<div class="selectbox">
-							<label for="serviceArea">동구전체</label>
-							<select data-gu="1" data-pid="01">
-								<option value="" data-pid="01">동구 선택</option>
-								<option value="1" data-pid="01">동구 전체</option>
-								<option value="충장동">충장동</option>
-								<option value="동명동">동명동</option>
-								<option value="계림1동">계림1동</option>
-								<option value="계림2동">계림2동</option>
-								<option value="산수1동">산수1동</option>
-								<option value="산수2동">산수2동</option>
-								<option value="지산1동">지산1동</option>
-								<option value="지산2동">지산2동</option>
-								<option value="서남동">서남동</option>
-								<option value="학동">학동</option>
-								<option value="학운동">학운동</option>
-								<option value="지원1동">지원1동</option>
-								<option value="지원2동">지원2동</option>
-							</select>
-					</div>
-				</div>
-			</li>
-			<li class="p05">
-				<div class="mapSearch">
-					<div class="selectbox">
-							<label for="serviceArea">서구전체</label>
-							<select data-gu="2" data-pid="02">
-								<option value="" data-pid="02">서구 선택</option>
-								<option value="1" data-pid="02">서구 전체</option>
-								<option value="양동">양동</option>
-								<option value="양3동">양3동</option>
-								<option value="농성1동">농성1동</option>
-								<option value="농성2동">농성2동</option>
-								<option value="광천동">광천동</option>
-								<option value="유덕동">유덕동</option>
-								<option value="치평동">치평동</option>
-								<option value="상무1동">상무1동</option>
-								<option value="상무2동 ">상무2동 </option>
-								<option value="화정1동">화정1동</option>
-								<option value="화정2동">화정2동</option>
-								<option value="화정3동 ">화정3동 </option>
-								<option value="화정4동">화정4동</option>
-								<option value="서창동">서창동</option>
-								<option value="금호1동">금호1동</option>
-								<option value="금호2동">금호2동</option>
-								<option value="풍암동">풍암동</option>
-								<option value="동천동">동천동</option>
-							</select>
-					</div>
-				</div>
-			</li>
-			<li class="p04">
-				<div class="mapSearch">
-					<div class="selectbox">
-							<label for="serviceArea">남구전체</label>
-							<select data-gu="3" data-pid="03">
-								<option value="" data-pid="03">남구 선택</option>
-								<option value="1" data-pid="03">남구 전체</option>
-								<option value="양림동">양림동</option>
-								<option value="방림1동">방림1동</option>
-								<option value="방림2동">방림2동</option>
-								<option value="봉선1동">봉선1동</option>
-								<option value="봉선2동">봉선2동</option>
-								<option value="사직동">사직동</option>
-								<option value="월산동">월산동</option>
-								<option value="월산4동">월산4동</option>
-								<option value="월산5동">월산5동</option>
-								<option value="백운1동">백운1동</option>
-								<option value="백운2동">백운2동</option>
-								<option value="주월1동">주월1동</option>
-								<option value="주월2동">주월2동</option>
-								<option value="효덕동">효덕동</option>
-								<option value="송암동">송암동</option>
-								<option value="대촌동">대촌동</option>
-							</select>
-					</div>
-				</div>
-			</li>
-			<li class="p18">
-				<div class="mapSearch">
-					<div class="selectbox">
-							<label for="serviceArea">북구전체</label>
-							<select data-gu="4" data-pid="04">
-								<option value="" data-pid="04">북구 선택</option>
-								<option value="1" data-pid="04">북구 전체</option>
-								<option value="중흥1동">중흥1동</option>
-								<option value="중흥2동">중흥2동</option>
-								<option value="중흥3동">중흥3동</option>
-								<option value="중앙동">중앙동</option>
-								<option value="임동">임동</option>
-								<option value="신안동">신안동</option>
-								<option value="용봉동">용봉동</option>
-								<option value="운암1동">운암1동</option>
-								<option value="운암2동">운암2동</option>
-								<option value="운암3동">운암3동</option>
-								<option value="동림동">동림동</option>
-								<option value="우산동">우산동</option>
-								<option value="풍향동">풍향동</option>
-								<option value="문화동">문화동</option>
-								<option value="문흥1동">문흥1동</option>
-								<option value="문흥2동">문흥2동</option>
-								<option value="두암1동">두암1동</option>
-								<option value="두암2동">두암2동</option>
-								<option value="두암3동">두암3동</option>
-								<option value="삼각동">삼각동</option>
-								<option value="일곡동">일곡동</option>
-								<option value="매곡동">매곡동</option>
-								<option value="오치1동">오치1동</option>
-								<option value="오치2동">오치2동</option>
-								<option value="석곡동">석곡동</option>
-								<option value="건국동">건국동</option>
-								<option value="양산동">양산동</option>
-							</select>
-					</div>
-				</div>
-			</li>
-			<li class="p27">
-				<div class="mapSearch">
-					<div class="selectbox">
-							<label for="serviceArea">광산구전체</label>
-							<select data-gu="5" data-pid="05">
-								<option value="" data-pid="05">광산구 선택</option>
-								<option value="1" data-pid="05">광산구 전체</option>
-								<option value="송정1동">송정1동</option>
-								<option value="송정2동">송정2동</option>
-								<option value="도산동">도산동</option>
-								<option value="신흥동">신흥동</option>
-								<option value="어룡동">어룡동</option>
-								<option value="우산동">우산동</option>
-								<option value="월곡1동">월곡1동</option>
-								<option value="월곡2동">월곡2동</option>
-								<option value="비아동">비아동</option>
-								<option value="첨단1동">첨단1동</option>
-								<option value="첨단2동">첨단2동</option>
-								<option value="신가동">신가동</option>
-								<option value="운남동">운남동</option>
-								<option value="신창동">신창동</option>
-								<option value="수완동">수완동</option>
-								<option value="하남동">하남동</option>
-								<option value="임곡동">임곡동</option>
-								<option value="동곡동">동곡동</option>
-								<option value="평동">평동</option>
-								<option value="삼도동">삼도동</option>
-								<option value="본량동">본량동</option>
-							</select>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
-
-
-<div id="map"></div>
+			<div class="logo"><a href="#"><img src="https://www.gwangju.go.kr/home/www/images/corona/map_toptitle.png" alt=""></a></div>
+			<div class="header_text">
+				<span><strong>확진환자</strong> : <strong>7,822</strong>명</span>
+				(치료중 689명,
+				격리해제 7,094명,
+				사망 39명) &nbsp; &nbsp;
+				<span><br><strong>접촉자</strong> : <strong>122,188</strong>명</span>
+				(격리 4,668명,
+				해제 117,520명)
+			</div>
+			<div class="header_text02">
+				※ 확진자가 마지막 접촉자와 접촉한 날로부터 14일이 경과되거나, 확진자와의 전체 접촉자가 파악 완료된 장소는 지도상에 표시되지 않습니다.
+			</div>
+		</div>
+		<div class="map_group">
+			<div id="map_left">
+				<p class="btn_hide"><a href="javascript:void(0)" data-pid="06">확진자 이동경로</a></p>
+				<ul class="hidebox showYn">
+					<li class="p29"><a href="javascript:location.reload();" class="all" data-pid="06">광주 전체 보기</a></li>
+					<li class="p08">
+						<div class="mapSearch">
+							<div class="selectbox">
+									<label for="serviceArea">동구전체</label>
+									<select data-gu="1" data-pid="01">
+										<option value="" data-pid="01">동구 선택</option>
+										<option value="1" data-pid="01">동구 전체</option>
+										<option value="충장동">충장동</option>
+										<option value="동명동">동명동</option>
+										<option value="계림1동">계림1동</option>
+										<option value="계림2동">계림2동</option>
+										<option value="산수1동">산수1동</option>
+										<option value="산수2동">산수2동</option>
+										<option value="지산1동">지산1동</option>
+										<option value="지산2동">지산2동</option>
+										<option value="서남동">서남동</option>
+										<option value="학동">학동</option>
+										<option value="학운동">학운동</option>
+										<option value="지원1동">지원1동</option>
+										<option value="지원2동">지원2동</option>
+									</select>
+							</div>
+						</div>
+					</li>
+					<li class="p05">
+						<div class="mapSearch">
+							<div class="selectbox">
+									<label for="serviceArea">서구전체</label>
+									<select data-gu="2" data-pid="02">
+										<option value="" data-pid="02">서구 선택</option>
+										<option value="1" data-pid="02">서구 전체</option>
+										<option value="양동">양동</option>
+										<option value="양3동">양3동</option>
+										<option value="농성1동">농성1동</option>
+										<option value="농성2동">농성2동</option>
+										<option value="광천동">광천동</option>
+										<option value="유덕동">유덕동</option>
+										<option value="치평동">치평동</option>
+										<option value="상무1동">상무1동</option>
+										<option value="상무2동 ">상무2동 </option>
+										<option value="화정1동">화정1동</option>
+										<option value="화정2동">화정2동</option>
+										<option value="화정3동 ">화정3동 </option>
+										<option value="화정4동">화정4동</option>
+										<option value="서창동">서창동</option>
+										<option value="금호1동">금호1동</option>
+										<option value="금호2동">금호2동</option>
+										<option value="풍암동">풍암동</option>
+										<option value="동천동">동천동</option>
+									</select>
+							</div>
+						</div>
+					</li>
+					<li class="p04">
+						<div class="mapSearch">
+							<div class="selectbox">
+									<label for="serviceArea">남구전체</label>
+									<select data-gu="3" data-pid="03">
+										<option value="" data-pid="03">남구 선택</option>
+										<option value="1" data-pid="03">남구 전체</option>
+										<option value="양림동">양림동</option>
+										<option value="방림1동">방림1동</option>
+										<option value="방림2동">방림2동</option>
+										<option value="봉선1동">봉선1동</option>
+										<option value="봉선2동">봉선2동</option>
+										<option value="사직동">사직동</option>
+										<option value="월산동">월산동</option>
+										<option value="월산4동">월산4동</option>
+										<option value="월산5동">월산5동</option>
+										<option value="백운1동">백운1동</option>
+										<option value="백운2동">백운2동</option>
+										<option value="주월1동">주월1동</option>
+										<option value="주월2동">주월2동</option>
+										<option value="효덕동">효덕동</option>
+										<option value="송암동">송암동</option>
+										<option value="대촌동">대촌동</option>
+									</select>
+							</div>
+						</div>
+					</li>
+					<li class="p18">
+						<div class="mapSearch">
+							<div class="selectbox">
+									<label for="serviceArea">북구전체</label>
+									<select data-gu="4" data-pid="04">
+										<option value="" data-pid="04">북구 선택</option>
+										<option value="1" data-pid="04">북구 전체</option>
+										<option value="중흥1동">중흥1동</option>
+										<option value="중흥2동">중흥2동</option>
+										<option value="중흥3동">중흥3동</option>
+										<option value="중앙동">중앙동</option>
+										<option value="임동">임동</option>
+										<option value="신안동">신안동</option>
+										<option value="용봉동">용봉동</option>
+										<option value="운암1동">운암1동</option>
+										<option value="운암2동">운암2동</option>
+										<option value="운암3동">운암3동</option>
+										<option value="동림동">동림동</option>
+										<option value="우산동">우산동</option>
+										<option value="풍향동">풍향동</option>
+										<option value="문화동">문화동</option>
+										<option value="문흥1동">문흥1동</option>
+										<option value="문흥2동">문흥2동</option>
+										<option value="두암1동">두암1동</option>
+										<option value="두암2동">두암2동</option>
+										<option value="두암3동">두암3동</option>
+										<option value="삼각동">삼각동</option>
+										<option value="일곡동">일곡동</option>
+										<option value="매곡동">매곡동</option>
+										<option value="오치1동">오치1동</option>
+										<option value="오치2동">오치2동</option>
+										<option value="석곡동">석곡동</option>
+										<option value="건국동">건국동</option>
+										<option value="양산동">양산동</option>
+									</select>
+							</div>
+						</div>
+					</li>
+					<li class="p27">
+						<div class="mapSearch">
+							<div class="selectbox">
+									<label for="serviceArea">광산구전체</label>
+									<select data-gu="5" data-pid="05">
+										<option value="" data-pid="05">광산구 선택</option>
+										<option value="1" data-pid="05">광산구 전체</option>
+										<option value="송정1동">송정1동</option>
+										<option value="송정2동">송정2동</option>
+										<option value="도산동">도산동</option>
+										<option value="신흥동">신흥동</option>
+										<option value="어룡동">어룡동</option>
+										<option value="우산동">우산동</option>
+										<option value="월곡1동">월곡1동</option>
+										<option value="월곡2동">월곡2동</option>
+										<option value="비아동">비아동</option>
+										<option value="첨단1동">첨단1동</option>
+										<option value="첨단2동">첨단2동</option>
+										<option value="신가동">신가동</option>
+										<option value="운남동">운남동</option>
+										<option value="신창동">신창동</option>
+										<option value="수완동">수완동</option>
+										<option value="하남동">하남동</option>
+										<option value="임곡동">임곡동</option>
+										<option value="동곡동">동곡동</option>
+										<option value="평동">평동</option>
+										<option value="삼도동">삼도동</option>
+										<option value="본량동">본량동</option>
+									</select>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div id="map"></div>
         
         
         
@@ -304,7 +309,7 @@
         </div>
         <br><br><br><br><br><br><br>
       </section>
-      
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       
       <!-- Section 3 -->
       <section class="section background-white">      
@@ -375,82 +380,11 @@
         </div>       
       </section>
       
-      <!-- Section 4 -->
-      <section class="background-primary full-width">        
-        <div class="m-12 l-6 xl-5 xxl-4">
-          <img class="full-img" src="resources/user/img/img-02.jpg"/>
-        </div>         
-        <div class="m-12 l-6 xl-7 xxl-8">
-          <div class="l-12 xl-11 xxl-8 padding-2x">
-            <h2 class="text-l-size-40 text-size-50 text-white">Always <b>Nearby</b></h2>
-            <p class="margin-bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
-            <!-- white Start your Business object -->
-            <img class="margin-left-20 margin-top-30 margin-bottom-60" src="resources/user/img/start-your-business.svg" alt="">
-          </div>  
-        </div>
-      </section>
+   
       
-      <!-- Section 5 -->
-      <section class="section-small-padding background-grey">   
-        <div class="line-full-width">
-          <div class="margin2x">
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-1.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-2.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-3.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-1.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-4.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-5.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-3.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-1.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-5.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-4.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-1.png"/>
-             </div>
-             <div class="m-6 l-1">
-                <img class="margin-bottom" src="resources/user/img/logo-2.png"/>
-             </div>
-          </div>
-        </div>  
-      </section> 
+     
       
-      <!-- Section 7 -->
-      <section class="section-small-padding background-dark text-center">      
-        <div class="line">
-          <h2 class="text-white text-size-50 text-m-size-40 margin-bottom-20">Get <b>Free Version</b></h2>
-          <div class="m-10 l-6 xl-4 center">
-            <div class="margin">
-              <a class="s-12 m-6 margin-s-bottom" href="/">
-                <img class="full-img right" src="resources/user/img/google-play.svg" alt="">
-              </a>
-              <a class="s-12 m-6" href="/">
-                <img class="full-img" src="resources/user/img/app-store.svg" alt="">
-              </a>
-            </div>
-          </div>                                                                                               
-        </div>       
-      </section>     
+       
       
     </main>
     
@@ -519,7 +453,10 @@
     
     
     
-    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=915b86b99df69c4b2df084a1d54f741a&libraries=services,clusterer,drawing"></script>
+    <!--  지도    -->
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b6c8d161408a929e0d9cb008c878e0cf&libraries=services,clusterer,drawing"></script>
+    
+    
 	<script>
 		//모바일 체크
 		var filter = "win16|win32|win64|mac";
