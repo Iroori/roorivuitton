@@ -53,12 +53,24 @@ public class BoardController {
 		public String index() {
 			return "index";		
 		}
+		@RequestMapping("/index2")
+		public String index2() {
+			return "index2";
+		}
 		
 		@RequestMapping("/login")
 		public String login() {
 			return "login";		
 		}
 		
+		@RequestMapping("/join")
+		public String join() {
+			return "join";
+		}
+		@RequestMapping("/jointerms")
+		public String jointerms() {
+			return "jointerms";
+		}
 	
 		
 //		@RequestMapping(value="/learning",method = {RequestMethod.GET,RequestMethod.POST})

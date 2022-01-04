@@ -227,22 +227,13 @@
               <span class="menu-title">신고 게시판확인</span>
             </a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="index2">
               <i class="mdi mdi-file-document-box-outline menu-icon"></i>
               <span class="menu-title">스틸컷 확인</span>
             </a>
           </li>
-          
-          
-             <li class="nav-item">
-            <a class="nav-link" href="jointerms">
-              <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-              <span class="menu-title">회원가입</span>
-            </a>
-          </li>
-          
-          
           
           
           
@@ -340,9 +331,10 @@
             <div class="col-md-7 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h1> 실내 인원관리</h1>
-                  <h4>Gross sales over the years</h4>
-                  <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
+                  <p class="card-title">Cash deposits</p>
+                  <p class="mb-4">To start a blog, think of a topic about and first brainstorm party is ways to write details</p>
+                  <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
+                  <img class="mask" src="resources/admin/images/mask.png">
                 
                 </div>
               </div>
@@ -355,7 +347,7 @@
               <div class="card">
                 <div class="card-body">
                   
-                  <h1>통계?</h1>
+                  <h1> 실내 인원관리</h1>
                   <h4>Gross sales over the years</h4>
                   <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
                   <div id="total-sales-chart-legend"></div>                  
