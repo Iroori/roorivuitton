@@ -300,7 +300,7 @@
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">22/01/01/00:00</small>
-                            <img src="resources/admin/images/faces/face${cnt}.jpg"> 
+                            <img class="small" src="resources/admin/images/faces/face${cnt}.jpg"> 
                           </div>
                         </div>
                       </c:forEach>
@@ -328,13 +328,13 @@
           
           
           <div class="row">
-            <div class="col-md-7 grid-margin stretch-card">
+            <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <p class="card-title">Cash deposits</p>
                   <p class="mb-4">To start a blog, think of a topic about and first brainstorm party is ways to write details</p>
                   <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
-                  <img class="mask" src="resources/admin/images/mask.png">
+                  <img id="big" class="mask" src="resources/admin/images/mask.png">
                 
                 </div>
               </div>
@@ -483,8 +483,22 @@
   
    
    -->
+
+  <script>
+  var bigPic = document.querySelector("#big");
+  var smallPics = document.querySelectorAll(".small");
+  
+  for(var i = 0; i< smallPics.length; i++){
+	  smallPics[i].addEventListener("click",changepic);
+	  
+  }
+  function changepic(){
+	  var smallPicAttribute = this.getAttribute("src");
+	  bigPic.setAttribute("src",smallPicAttribute);
+  }
   
   
+  </script>
   
   
   

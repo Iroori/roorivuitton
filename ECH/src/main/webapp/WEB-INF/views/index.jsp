@@ -297,37 +297,31 @@
                      
                      
                      
-                     
-                     
-                     
-                     
-                     <div class="owl-carousel">
-                     
-                     
-                      <!--  스틸컷. -->
-                      <c:forEach var="cnt" begin="1" end="10" step="1">
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
                           <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">22/01/01/00:00</small>
-                            <img src="resources/admin/images/faces/face${cnt}.jpg"> 
+                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
                           </div>
                         </div>
-                      </c:forEach>
-                      
-                      </div>
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+                        
+                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
+                          </div>
+                        </div>
+                        
+                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
+                          </div>
+                        </div>
+                        
+                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
+                          </div>
+                        </div>
+                    
+                                            
                 </div>                   
               </div>
             </div>
@@ -343,6 +337,7 @@
                   <h1> 실내 인원관리</h1>
                   <h4>Gross sales over the years</h4>
                   <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
+                  <img src="resources/admin/images/mask.png">
                 
                 </div>
               </div>
