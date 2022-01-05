@@ -32,6 +32,14 @@
     <script type="text/javascript" src="resources/user/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="resources/user/js/jquery-ui.min.js"></script>
     <script src="resources/user/js/modernizr.custom.js"></script>   
+    
+    
+  
+    
+    
+    
+    
+    
   </head>
 
   <body class="size-1280">
@@ -78,6 +86,7 @@
                   
                 </li>
                 <li><a href="gallery.html">마스크</a></li>
+                <li><a href="jointerms">회원가입</a></li>
                 <li><a href="login">로그인</a></li>
                 <li><a href="index">index</a></li>
              </ul> 
@@ -141,8 +150,16 @@
            <div class="s-12 m-12 l-12 margin-m-bottom-60">
               
               <div class="margin-left-10">
+         
+              
+              
+              
+              
+              
+              
               <table class="tb_default">
-				<caption>이표는 시도,시군구,장소유형,상호명,주소,노출일시,소독여부를 안내하는 표입니다</caption>				
+				<caption>이표는 시도,시군구,장소유형,상호명,주소,노출일시,소독여부를 안내하는 표입니다</caption>	
+							
 					<thead>
 						<tr>
 							<th class="route_th1">확진자번호</th>
@@ -152,7 +169,8 @@
 							<th class="route_th5">격리시설</th>							
 						</tr>
 					</thead>
-					<tbody id="co_table">
+					<tbody id="table1">
+						<!-- 
 						<tr>
 							<td>광주8112</td>
 							<td>광주 서구</td>
@@ -160,8 +178,10 @@
 							<td>12월 31일</td>
 							<td>병상 배정중</td>							
 						</tr>			
+						 -->
 					</tbody>
 				</table>
+			
                                           
               </div>                    
             </div>          
@@ -561,15 +581,53 @@
 			$("#situation").css("display","none");
 			
 		}	
-    })       
+    }) 
+    
+    
+   
+    
+    
+    
     
     </script>
+  
     
     
+ <!-- 
+ 
+  fetch("resources/user/json/covid.json")
+	.then(response => {
+	   return response.json();
+	})
+	
+	.then(jsondata => console.log(jsondata));
+   
+ 
+  -->
+    <script type="text/javascript" src="resources/user/js/covid.js"></script>
+     <script>
+     
+     buildTable(myArray) 
+     function buildTable(data) {
+    	  	 
+    	 var table = document.getElementById('table1')
+    	 for (var i=0; i < data.length; i++) {
+    		 
+    		 var row = "<tr>";
+    		 row += "<td>"+data[i].CONF_NUMBER+"</td>"
+    		 row += "<td>"+data[i].PERSONAL_DATA+"</td>"
+    		 row += "<td>"+data[i].INFECTION_PROCESS+"</td>"
+    		 row += "<td>"+data[i].CONF_DATE+"</td>"
+    		 row += "<td>"+data[i].ISOLATION_HOUSING+"</td>"
+    		 row += "</tr>"
+    	table.innerHTML += row
+    	}
+    	 } 
+     </script>
+
+
     
-    
-    
-    
+  
     
     
     

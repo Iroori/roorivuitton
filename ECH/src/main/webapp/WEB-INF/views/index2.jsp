@@ -227,22 +227,13 @@
               <span class="menu-title">신고 게시판확인</span>
             </a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="index2">
               <i class="mdi mdi-file-document-box-outline menu-icon"></i>
               <span class="menu-title">스틸컷 확인</span>
             </a>
           </li>
-          
-          
-             <li class="nav-item">
-            <a class="nav-link" href="jointerms">
-              <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-              <span class="menu-title">회원가입</span>
-            </a>
-          </li>
-          
-          
           
           
           
@@ -297,31 +288,37 @@
                      
                      
                      
+                     
+                     
+                     
+                     
+                     <div class="owl-carousel">
+                     
+                     
+                      <!--  스틸컷. -->
+                      <c:forEach var="cnt" begin="1" end="10" step="1">
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
                           <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
+                            <small class="mb-1 text-muted">22/01/01/00:00</small>
+                            <img class="small" src="resources/admin/images/faces/face${cnt}.jpg"> 
                           </div>
                         </div>
-                        
-                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
-                          </div>
-                        </div>
-                        
-                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
-                          </div>
-                        </div>
-                        
-                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">                          
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">22/01/01/00:00</small>                           
-                          </div>
-                        </div>
-                    
-                                            
+                      </c:forEach>
+                      
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                 </div>                   
               </div>
             </div>
@@ -331,13 +328,13 @@
           
           
           <div class="row">
-            <div class="col-md-7 grid-margin stretch-card">
+            <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h1> 실내 인원관리</h1>
-                  <h4>Gross sales over the years</h4>
-                  <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
-                  <img src="resources/admin/images/mask.png">
+                  <p class="card-title">Cash deposits</p>
+                  <p class="mb-4">To start a blog, think of a topic about and first brainstorm party is ways to write details</p>
+                  <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
+                  <img id="big" class="mask" src="resources/admin/images/mask.png">
                 
                 </div>
               </div>
@@ -350,7 +347,7 @@
               <div class="card">
                 <div class="card-body">
                   
-                  <h1>통계?</h1>
+                  <h1> 실내 인원관리</h1>
                   <h4>Gross sales over the years</h4>
                   <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
                   <div id="total-sales-chart-legend"></div>                  
@@ -486,8 +483,22 @@
   
    
    -->
+
+  <script>
+  var bigPic = document.querySelector("#big");
+  var smallPics = document.querySelectorAll(".small");
+  
+  for(var i = 0; i< smallPics.length; i++){
+	  smallPics[i].addEventListener("click",changepic);
+	  
+  }
+  function changepic(){
+	  var smallPicAttribute = this.getAttribute("src");
+	  bigPic.setAttribute("src",smallPicAttribute);
+  }
   
   
+  </script>
   
   
   
