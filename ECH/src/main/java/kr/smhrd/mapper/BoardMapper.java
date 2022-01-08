@@ -51,7 +51,7 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	 @Select("select * from python_board where idx=#{idx}")
 	 public Board boardGetCount(int idx);
 	 
-	 @Select("select * from pop_user where userId=#{userId} and userPwd=#{userPwd}")
+	 @Select("select * from member where userId=#{userId} and userPwd=#{userPwd}")
 	 public User login(User vo);
 	 
 	// @Insert("insert into pop_user values(#{userId},#{userPwd},#{userName})")

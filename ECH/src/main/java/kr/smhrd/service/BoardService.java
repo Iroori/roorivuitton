@@ -60,6 +60,7 @@ public class BoardService { // BoardController
 			return vo;
 		}
 		
+		
 		public User login(User vo) {
 			User user = mapper.login(vo);
 			return user;

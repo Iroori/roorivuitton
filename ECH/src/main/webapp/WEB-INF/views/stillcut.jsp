@@ -211,7 +211,7 @@
 
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+
 <script src="resources/main/js/anime.min.js"></script>
 <script src="resources/main/js/charming.min.js"></script>
 <script src="resources/main/js/main.js"></script>

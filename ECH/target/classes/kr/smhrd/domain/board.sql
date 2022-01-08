@@ -352,3 +352,49 @@ insert into pop_user values('admin','12','이성훈');
 
 insert into pop_board(title, contents, writer)
 values('스프링 게시판 만들기2','스프링게시판만들기2','ls');
+
+
+
+
+
+
+
+
+--        추가                       --
+
+
+
+
+create table member(
+	userId varchar(20) not null,
+	userPwd varchar(30) not null,
+	userEmail varchar(30) not null,
+	userName varchar(50) not null,
+	userBirth varchar(20) not null,
+	userSex varchar(10) not null default 0,
+	userPhone varchar(20) not null,
+	modelNumber varchar(20) not null,
+	primary key(userId)
+);
+
+
+insert into member(userId, userPwd, userEmail,userName,userBirth,userSex,userPhone,modelNumber)
+values('1','2','3','4','5','6','7','8');
+
+
+
+
+select * from member;
+drop table member;
+
+
+
+
+
+
+
+
+
+
+
+

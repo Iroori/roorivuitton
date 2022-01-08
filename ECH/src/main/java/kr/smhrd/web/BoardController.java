@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.smhrd.domain.Board;
 import kr.smhrd.domain.User;
@@ -69,6 +70,29 @@ public class BoardController {
 		public String signUp() {
 			return "signUp";
 		}
+		
+		
+		
+		@PostMapping("/ELogin.do")
+		public String login(User vo , HttpSession session) { // userId, userPwd
+			User users = service.login(vo);
+			if(users!=null) { // 인증 성공
+				// 객체바인딩(세션바인딩)
+				session.setAttribute("users", users);
+			}
+			return "main";
+		}
+		
+		
+		@GetMapping("/ELogout.do")
+		public String Logout(HttpSession session) { 
+			// 올래는 HttpSession session = request.getSession()
+			session.invalidate(); // 세션 무효화
+			return "login";
+		}
+		
+		
+		
 		
 	
 		

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +32,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="resources/main/css/main-style2.css">
+    <style>
+    	
+    </style>
     
     
 </head>
@@ -44,7 +48,10 @@
                     <a href="#">logo</a>
                 </div>
                 <div class="user-message">
-                    <div class="user-name">관리자님 반갑습니다.</div>
+                	<c:if test="${!empty users}">
+                    <div class="user-name">${users.userName}관리자님 반갑습니다</div>
+                 	
+                 	
                     <div class="user-info">
                         <div class="user-role">Manager</div>
                         <div class="dash">˙</div>
@@ -52,11 +59,17 @@
 
                     </div>
                     <div class="btn logout">
-                        <a href="#">logout</a></div>    
-                </div>
-            </div>
-
+                    	<form action="ELogout.do" method="get">                      
+                        <button >logout</button>                      
+                        </form>
+                	</div>
+                	
+                	
+                	</c:if>	
+            	</div>
+       		 </div>
         </div>
+       
 
 
     </header>
@@ -151,5 +164,11 @@
 
 
 </div>
+
+
+<script type="text/javascript" src="resources/main/js/jquery-3.6.0.js"></script>
+
+
+
 </body>
 </html>

@@ -126,18 +126,7 @@
 	width: calc(5 * (2 * var(--grid-item-padding) + var(--folder-width)));
 }
 
-.content::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 2em;
-	counter-increment: folderstyle;
-	font-weight: bold;
-	content: "folder style \203A  00" counter(folderstyle);
-	letter-spacing: 1px;
-	font-size: 0.95em;
-	color: #323437;
-}
+
 
 .grid__item {
 	padding: var(--grid-item-padding);
@@ -408,13 +397,11 @@
 
 /* ardra */
 .content--ardra {
-	background-color: #2b2d31;
+	background-color: #fafdff;
 	color: #4c4e52;
 }
 
-.content--ardra::after {
-	color: #396fc5;
-}
+
 
 .folder--ardra .folder__icon-img--back {
 	color: #234e91;
