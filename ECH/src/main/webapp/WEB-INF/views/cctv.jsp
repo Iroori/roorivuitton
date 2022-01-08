@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="resources/main/css/main-style2.css">
+    <link rel="stylesheet" href="resources/main/css/cctv.css">
     
     
 </head>
@@ -112,34 +112,28 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap-main">
-                <div class="main-cctv">
-                    <div class="main-title">CCTV</div>
+            <div class="wrap-main" id="cctv">
+                <div class="main-cctv">                    
+                    <div class="main-title">
+                        CCTV
+                        <select name="fruits" class="select">
+                            <option value="b1">새싹반</option>
+                            <option >병아리반</option>
+                            <option >반2</option>
+                            <option >반3</option>
+                            <option >반4</option>
+                            <option >반5</option>
+                            <option >반6</option>
+                          </select>
+                    
+                    </div>
+                    
                     <div class="cctv-container">
                         <fieldset>
                             <legend class="cctv-title">새싹반</legend>
-                            <video class="cctv-content" src="video/pexels-byron-sullivan-10672887.mp4" loop autoplay width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">병아리반</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662929.mp4"   width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반2</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662934.mp4"  width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반3</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662936.mp4" width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반4</legend>
-                            <video class="cctv-content" src="video/pexels-kostas-exarhos-10654617.mp4"  width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반5</legend>
-                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4"  width="400px"></video>
-                        </fieldset>
+                            
+                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4" loop autoplay width="1200px" height="590px"></video>
+                        </fieldset>                        
                         
                     </div>
                 </div>

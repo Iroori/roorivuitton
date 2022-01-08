@@ -30,10 +30,45 @@ public class BoardController {
 	
 		@RequestMapping("/")
 		public String main() { //localhost:8081/web/
-			return "main";
+			return "login";
+		}
+		
+		@RequestMapping("/main")
+		public String main1() {
+			return "main";		
 		}
 		
 		
+		@RequestMapping("/stillcut")
+		public String stillcut() {
+			return "stillcut";
+		}
+		
+		@RequestMapping("/cctv")
+		public String cctv() {
+			return "cctv";
+		}
+		
+		@RequestMapping("/peoplechart")
+		public String peoplechart() {
+			return "peoplechart";
+		}
+		
+		
+		@RequestMapping("/setting")
+		public String setting() {
+			return "setting";
+		}
+		
+		@RequestMapping("/login")
+		public String login() {
+			return "login";		
+		}
+		
+		@RequestMapping("/signUp")
+		public String signUp() {
+			return "signUp";
+		}
 		
 	
 		

@@ -110,16 +110,23 @@ header .user-info div{
   text-decoration: none;
 }
 
-
+/* 메인에서 바꾼부분*/
 .wrap-main{
   max-width:1400px;
   height:auto;
   background: #fafdff;
   border-radius: 10px;
   border: 1px solid #f0f6fd;
-  top:-100px;
+  top:-250px;
   position:relative;
 }
+#cctv{
+  height : 760px;
+}
+/* 바꾼부분*/
+
+
+
 .main-cctv{
   margin : 30px 30px;
 }
@@ -147,29 +154,24 @@ fieldset{
 }
 
 
-.setting{
-  width:1200px;
-  
+/* 메인에서 바꾼부분*/
+.select {
+  float: right;
+width: 150px;
+height: 35px;
+margin: 10px;   
+background-size: 20px;
+padding: 5px 30px 5px 10px;
+border-radius: 4px;
+outline: 0 none;
+}
+.select option {
+background: black;
+color: #fff;
+padding: 3px 0;
 }
 
-.mi {
-  width: 18%;
-  padding: 14px 20px;
-  margin: 15px 15px 40px 30px;
-  box-sizing: border-box;
-  border-radius: 15px;
+video{
+  margin: 20px;
 }
-.mb{
-  width: 35%;
-  padding: 14px 20px;
-  margin: 15px 15px 40px 30px;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-.mp{
-  width: 20%;
-  padding: 14px 20px;
-  margin: 15px 15px 40px 30px;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
+/* 메인에서 바꾼부분*/

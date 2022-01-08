@@ -146,30 +146,3 @@ fieldset{
   padding-bottom: 10px;
 }
 
-
-.setting{
-  width:1200px;
-  
-}
-
-.mi {
-  width: 18%;
-  padding: 14px 20px;
-  margin: 15px 15px 40px 30px;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-.mb{
-  width: 35%;
-  padding: 14px 20px;
-  margin: 15px 15px 40px 30px;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-.mp{
-  width: 20%;
-  padding: 14px 20px;
-  margin: 15px 15px 40px 30px;
-  box-sizing: border-box;
-  border-radius: 15px;
-}

@@ -66,7 +66,7 @@
         <div class="wrap">
             <div class="menu">
                 <div class="menu-list1">
-                    <div class="menu-img">
+                       <div class="menu-img">
                         <a href="main"><img src="resources/main/images/dashboard.png"></a>
                     </div>
                     <div class="menu-title">
@@ -114,32 +114,28 @@
             </div>
             <div class="wrap-main">
                 <div class="main-cctv">
-                    <div class="main-title">CCTV</div>
+                    <div class="main-title">Setting</div>
                     <div class="cctv-container">
-                        <fieldset>
-                            <legend class="cctv-title">새싹반</legend>
-                            <video class="cctv-content" src="video/pexels-byron-sullivan-10672887.mp4" loop autoplay width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">병아리반</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662929.mp4"   width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반2</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662934.mp4"  width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반3</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662936.mp4" width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반4</legend>
-                            <video class="cctv-content" src="video/pexels-kostas-exarhos-10654617.mp4"  width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반5</legend>
-                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4"  width="400px"></video>
-                        </fieldset>
+                        <div class="setting">
+                            <input type="text" class="mi" placeholder="장소명">
+                            <input type="text" class="mb" placeholder="모델 일련번호">
+                            <input type="text" class="mp" placeholder="적정인원"> 
+                        </div>
+                        <div class="setting">
+                            <input type="text" class="mi" placeholder="장소명">
+                            <input type="text" class="mb" placeholder="모델 일련번호">
+                            <input type="text" class="mp" placeholder="적정인원"> 
+                        </div>
+                        <div class="setting">
+                            <input type="text" class="mi" placeholder="장소명">
+                            <input type="text" class="mb" placeholder="모델 일련번호">
+                            <input type="text" class="mp" placeholder="적정인원"> 
+                        </div>
+                        <div class="setting">
+                            <input type="text" class="mi" placeholder="장소명">
+                            <input type="text" class="mb" placeholder="모델 일련번호">
+                            <input type="text" class="mp" placeholder="적정인원"> 
+                        </div>
                         
                     </div>
                 </div>

@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="resources/main/css/main-style2.css">
+    <link rel="stylesheet" href="resources/main/css/cctv.css">
     
     
 </head>
@@ -66,7 +66,7 @@
         <div class="wrap">
             <div class="menu">
                 <div class="menu-list1">
-                    <div class="menu-img">
+                         <div class="menu-img">
                         <a href="main"><img src="resources/main/images/dashboard.png"></a>
                     </div>
                     <div class="menu-title">
@@ -118,27 +118,27 @@
                     <div class="cctv-container">
                         <fieldset>
                             <legend class="cctv-title">새싹반</legend>
-                            <video class="cctv-content" src="video/pexels-byron-sullivan-10672887.mp4" loop autoplay width="400px"></video>
+                            <canvas id="chart1" class="image fit thumb" width="400px"></canvas>
                         </fieldset>
                         <fieldset>
                             <legend class="cctv-title">병아리반</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662929.mp4"   width="400px"></video>
+                            <canvas id="chart2" class="image fit thumb" width="400px"></canvas>
                         </fieldset>
                         <fieldset>
                             <legend class="cctv-title">반2</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662934.mp4"  width="400px"></video>
+                            <canvas id="chart3" class="image fit thumb" width="400px"></canvas>
                         </fieldset>
                         <fieldset>
                             <legend class="cctv-title">반3</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662936.mp4" width="400px"></video>
+                            <canvas id="chart4" class="image fit thumb" width="400px"></canvas>
                         </fieldset>
                         <fieldset>
                             <legend class="cctv-title">반4</legend>
-                            <video class="cctv-content" src="video/pexels-kostas-exarhos-10654617.mp4"  width="400px"></video>
+                            <canvas id="chart5" class="image fit thumb" width="400px"></canvas>
                         </fieldset>
                         <fieldset>
                             <legend class="cctv-title">반5</legend>
-                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4"  width="400px"></video>
+                            <canvas id="chart6" class="image fit thumb" width="400px"></canvas>
                         </fieldset>
                         
                     </div>
@@ -151,5 +151,8 @@
 
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+<script src="resources/main/js/MyChart.js"></script>
+
 </body>
 </html>
