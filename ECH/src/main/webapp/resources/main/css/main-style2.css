@@ -1,0 +1,147 @@
+.body__container{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size:16px;
+  font-weight: 400;
+  color : #333;
+}
+
+/*Header*/
+header{
+  
+  border-bottom: 1px solid rgba(28,24,102,1);
+  box-shadow : 0 0 5px rgba(28,24,102,1);
+  background : rgba(28,24,102,1) linear-gradient(to right, rgba(28,24,102,1),rgba(15,15,128,1), rgba(7,53,150,1));
+  opacity: 0.9;
+  height:auto;
+  color: rgb(233, 233, 233);
+  
+}
+
+header .wrapper{
+  height:400px;
+  max-width:1800px;
+  margin: 0 auto;
+  text-align:left;
+  
+}
+header .logo a{
+  background: url("/images/logo.svg");
+  width: 120px;
+  height: 40px;
+  display: block;
+  text-indent:-9999px;
+}
+
+header .menu-group{
+  padding-top:50px;
+  height:100%;
+  margin-left:50px;
+}
+
+header .user-message{
+  padding-top:150px;
+  font-size:26px;
+  font-weight:500;
+}
+header .user-info{
+  display:flex;
+  padding-top:14px;
+  font-size: 16px;
+  font-weight:300;
+}
+header .user-info div{
+  padding-right:10px;
+}
+
+/* */
+.btn{
+  display:block;
+  padding-top:18px;
+  font-size:14px;
+  font-weight: 300;
+}
+.btn.logout a{
+  color :rgb(197, 197, 197);
+  text-decoration: none;
+}
+
+/* Visual -menu*/
+.wrap{
+  height: auto;
+  width: auto;
+  display:flex;
+  background: #edf1f6;
+  position: relative;
+}
+.wrap .menu{
+  height:400px;
+  width:350px;
+  margin-left:80px;
+  margin-top:50px;
+}
+.menu-list1, .menu-list2, .menu-list3, .menu-list4,.menu-list5, .menu-list6{
+  
+  width: 120px;
+  height: 100px;
+  text-align: center;
+  float:left;
+  padding:25px 8px;
+  cursor: pointer;
+}
+/* 버튼 클릭 시 변경js로 하는게 나을듯 ㅡㅡ
+.menu-list1:hover{
+  background:rgba(62,69,245,1);
+  border: 1px solid rgba(62,69,245,1);
+  border-radius: 10px;
+  box-shadow: 5px gray;
+}*/
+.menu-list1 img, .menu-list2 img, .menu-list3 img, .menu-list4 img,.menu-list5 img, .menu-list6 img{
+  width:38px;
+  height:38px;
+  text-align:center;
+  margin-top: 5px;
+  margin-bottom:8px;
+}
+
+.menu-title a{
+  color:rgb(31, 31, 31);
+  font-size: 13px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+
+.wrap-main{
+  max-width:1400px;
+  height:auto;
+  background: #fafdff;
+  border-radius: 10px;
+  border: 1px solid #f0f6fd;
+  top:-100px;
+  position:relative;
+}
+.main-cctv{
+  margin : 30px 30px;
+}
+.main-title{
+  font-size:26px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  margin: 0 0 0 15px;
+}
+fieldset{
+  float:left;
+  margin-right:30px;
+  margin-bottom:20px;
+  margin-left: 15px;
+}
+.cctv-container{
+  float:left;
+  width:auto;
+  
+}
+.cctv-title{
+  font-size : 16px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}

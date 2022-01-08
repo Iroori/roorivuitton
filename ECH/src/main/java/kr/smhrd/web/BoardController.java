@@ -30,47 +30,11 @@ public class BoardController {
 	
 		@RequestMapping("/")
 		public String main() { //localhost:8081/web/
-			return "index";
+			return "main";
 		}
 		
 		
-		@RequestMapping("/index10")
-		public String index10() {
-			return "index10";
-		}
 		
-		@RequestMapping("/index11")
-		public String index11() {
-			return "index11";
-		}
-		
-		@RequestMapping("/report")
-		public String index12() {
-			return "index12";
-		}
-		
-		@RequestMapping("/index")
-		public String index() {
-			return "index";		
-		}
-		@RequestMapping("/index2")
-		public String index2() {
-			return "index2";
-		}
-		
-		@RequestMapping("/login")
-		public String login() {
-			return "login";		
-		}
-		
-		@RequestMapping("/join")
-		public String join() {
-			return "join";
-		}
-		@RequestMapping("/jointerms")
-		public String jointerms() {
-			return "jointerms";
-		}
 	
 		
 //		@RequestMapping(value="/learning",method = {RequestMethod.GET,RequestMethod.POST})
