@@ -10,11 +10,7 @@
    <!-- DB연결에 필요한 API설정(HikariCP-DBCP) -->
    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
       <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-<<<<<<< HEAD
       <property name="jdbcUrl" value="jdbc:mysql:// project-db-stu.ddns.net:3307/ech"/>
-=======
-      <property name="jdbcUrl" value="jdbc:mysql://project-db-stu.ddns.net:3307/ech"/>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-6/ECH-.git
       <property name="username" value="ech"/>
       <property name="password" value="ech"/>
     </bean>   
