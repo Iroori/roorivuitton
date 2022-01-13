@@ -373,33 +373,40 @@ create table member(
 	userBirth varchar(20) not null,
 	userSex varchar(10) not null default 0,
 	userPhone varchar(20) not null,
-	modelNumber varchar(20) not null,
+	가입일자
+	사업자번호 varchar(20) not null,
 	constraint member_id_pk PRIMARY KEY (userId)   
 );
 
 
-create table image(
-	img_no int not null auto_increment,
-	img_file varchar(200) not null,
-	img_time datetime not null default now(),
-	img_type varchar(20) not null,
-	primary key(img_no)
-)
 
 create table cctv(
 	cctv_no int unsigned not null auto_increment,
 	cctv_serial varchar(20) not null,
 	cctv_location varchar(200) not null,
 	cctv_data datetime not null default now(),
-	cctv_total_user int not null,
-	
+	cctv_total_user int not null,	
 	userId varchar(20) not null,
+	사업자번호
 	 constraint child_pk
         Foreign key (userId)
         references member(userId)
-        on delete cascade	
-	
+        on delete cascade		
 );
+
+
+select *
+
+
+create table image(
+	img_no int not null auto_increment,
+	cctv번호
+	img_file varchar(200) not null,
+	img_time datetime not null default now(),
+	img_type varchar(20) not null,
+	primary key(img_no)
+)
+
 
 insert into image(img_file,img_type)
 values('resources/main/images/faces/face1.jpg','s1');
