@@ -15,15 +15,15 @@
 
 <div class="body_container">
     <!-- 사이드 메뉴 바 -->
-    <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 5rem; height: 100vh; float: left; background-color: #094275 !important; position: sticky;
+   <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 5rem; height: 100vh; float: left; background-color: #094275 !important; position: sticky;
   top: 0;">
-        <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+        <a href="main" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
             <img class="bi" width="50" height="50" style="margin-top:25px; margin-bottom:140px;"src="resources/admin/images/icon/logo-v.png">
         
         </a>
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
           <li class="nav-item" >
-            <a href="#" class="nav-link py-3 border-bottom border-top" style="padding-top:1.5rem!important;
+            <a href="main" class="nav-link py-3 border-bottom border-top" style="padding-top:1.5rem!important;
             padding-bottom:1.5rem!important;" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
               <img class="bi" width="30" height="30" src="resources/admin/images/icon/home-white.png">
             </a>
@@ -35,19 +35,19 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link py-3 border-bottom" style="padding-top:1.5rem!important;
+            <a href="cctv" class="nav-link py-3 border-bottom" style="padding-top:1.5rem!important;
             padding-bottom:1.5rem!important;"title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
                  <img class="bi" width="30" height="30" src="resources/admin/images/icon/camera-white.png">
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link py-3 border-bottom" style="padding-top:1.5rem!important;
+            <a href="stealcut" class="nav-link py-3 border-bottom" style="padding-top:1.5rem!important;
             padding-bottom:1.5rem!important;"title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
                 <img class="bi" width="30" height="30" src="resources/admin/images/icon/cloud-data-white.png">
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link py-3 border-bottom"style="padding-top:1.5rem!important;
+            <a href="peoplecount" class="nav-link py-3 border-bottom"style="padding-top:1.5rem!important;
             padding-bottom:1.5rem!important;" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
                 <img class="bi" width="30" height="30" src="resources/admin/images/icon/group-white.png">
             </a>

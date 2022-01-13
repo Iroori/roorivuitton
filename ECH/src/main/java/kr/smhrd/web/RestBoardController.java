@@ -71,8 +71,6 @@ public class RestBoardController {
 		@PostMapping("/userInsert.do")
 		public @ResponseBody void userInsert(User vo) { // userId, userPwd
 			service.join(vo);
-			
-			
 		}
 		
 		@PostMapping("/uesrAjaxIdCheck")	    

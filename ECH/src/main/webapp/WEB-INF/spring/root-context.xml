@@ -9,6 +9,7 @@
    <!-- Root Context: defines shared resources visible to all other web components -->
    <!-- DB연결에 필요한 API설정(HikariCP-DBCP) -->
    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+
       <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
       <property name="jdbcUrl" value="jdbc:mysql:// project-db-stu.ddns.net:3307/ech"/>
       <property name="username" value="ech"/>

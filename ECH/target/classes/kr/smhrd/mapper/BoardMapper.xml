@@ -15,8 +15,8 @@
     select * from python_board where idx=#{idx}
   </select>
   <insert id="join" parameterType="kr.smhrd.domain.Board">
-    insert into member (userId,userPwd,userEmail,userName,userBirth,userSex,userPhone,modelNumber)
-    values(#{userId},#{userPwd},#{userEmail},#{userName},#{userBirth},#{userSex},#{userPhone},#{modelNumber})
+    insert into member (user_id,user_pwd,user_email,user_name,user_birth,user_sex,user_phone,company_bno)
+    values(#{user_id},#{user_pwd},#{user_email},#{user_name},#{user_birth},#{user_sex},#{user_phone},#{company_bno})
   </insert>
  
   
