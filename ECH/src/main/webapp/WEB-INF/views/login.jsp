@@ -18,7 +18,7 @@
     <div class="embox-pd-100">
         <div class="login_bg"></div>
         <div class="login">
-            <p>E:Monitor</p>
+            <p>V:Monitor</p>
             <h2>LOGIN</h2>            
            <a href="signUp">회원가입</a>
             
@@ -26,18 +26,18 @@
             <form class="login_box" action="ELogin.do" method="post">
                 <div class="login_id">
                     <h4>ID</h4>
-                    <input type="text" name="userId"  placeholder="ID">
+                    <input type="text" name="user_id"  placeholder="ID">
                 </div>
                 <div class="login_pw">
                     <h4>PW</h4>
-                    <input type="password" name="userPwd" placeholder="Password">
+                    <input type="password" name="user_pwd" placeholder="Password">
                 </div>
 
                 <div class="submit">
                     <input type="submit" value="login">
                 </div>
-                <a href="signUp">Dashboard</a>  
-                <a href="peoplecount">peoplecount</a>              
+                <a href="main">Dashboard</a>  
+                          
             </form>
 
         </div>

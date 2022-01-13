@@ -51,14 +51,17 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	 @Select("select * from python_board where idx=#{idx}")
 	 public Board boardGetCount(int idx);
 	 
-	 @Select("select * from member where userId=#{userId} and userPwd=#{userPwd}")
+	 
+	 
+	 
+	 @Select("select * from member where user_id=#{user_id} and user_pwd=#{user_pwd}")
 	 public User login(User vo);
 	 
 	// @Insert("insert into pop_user values(#{userId},#{userPwd},#{userName})")
 	
 	 public void join(User vo);
 	 
-	@Select("SELECT COUNT(userId) FROM member WHERE userId= #{userId}")
+	@Select("SELECT COUNT(user_id) FROM member WHERE user_id= #{user_id}")
 	public int idCheck(User vo);
 	
 	

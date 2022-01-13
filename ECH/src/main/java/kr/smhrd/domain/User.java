@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-	private String userId;
-	private String userPwd;
-	private String userEmail;
-	private String userName;
-	private String userBirth;
-	private String userSex;
-	private String userPhone;
-	private String modelNumber;		
+	private String user_id;
+	private String user_pwd;
+	private String user_email;
+	private String user_name;
+	private String user_birth;
+	private String user_sex;
+	private String user_phone;
+	private String company_bno;	
 
 }

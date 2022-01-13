@@ -40,9 +40,9 @@ public class BoardController {
 		}
 		
 		
-		@RequestMapping("/stillcut")
-		public String stillcut() {
-			return "stillcut";
+		@RequestMapping("/stealcut")
+		public String stealcut() {
+			return "stealcut";
 		}
 		
 		@RequestMapping("/peoplecount")
@@ -84,7 +84,7 @@ public class BoardController {
 				// 객체바인딩(세션바인딩)
 				session.setAttribute("users", users);
 			}
-			return "signUp";
+			return "main";
 		}
 		
 		
