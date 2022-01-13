@@ -36,7 +36,8 @@
                 <div class="submit">
                     <input type="submit" value="login">
                 </div>
-                <a href="main">Dashboard</a>                
+                <a href="signUp">Dashboard</a>  
+                <a href="peoplecount">peoplecount</a>              
             </form>
 
         </div>

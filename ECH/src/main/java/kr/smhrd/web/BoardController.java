@@ -45,6 +45,10 @@ public class BoardController {
 			return "stillcut";
 		}
 		
+		@RequestMapping("/peoplecount")
+		public String peoplecount() {
+			return "peoplecount";
+		}
 		@RequestMapping("/cctv")
 		public String cctv() {
 			return "cctv";
@@ -80,7 +84,7 @@ public class BoardController {
 				// 객체바인딩(세션바인딩)
 				session.setAttribute("users", users);
 			}
-			return "main";
+			return "signUp";
 		}
 		
 		
