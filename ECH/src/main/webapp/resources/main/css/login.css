@@ -229,3 +229,7 @@ input:hover[type="submit"]
 		{
 			background: red;
 		}
+		
+		
+		
+.error_next_box{display:block;margin:9px 0 -2px;font-size:12px;line-height:14px;color:red}

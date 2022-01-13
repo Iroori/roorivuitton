@@ -58,7 +58,7 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	
 	 public void join(User vo);
 	 
-	@Select("SELECT COUNT(userId) FROM pop_user WHERE userId= #{userId}")
+	@Select("SELECT COUNT(userId) FROM member WHERE userId= #{userId}")
 	public int idCheck(User vo);
 	
 	

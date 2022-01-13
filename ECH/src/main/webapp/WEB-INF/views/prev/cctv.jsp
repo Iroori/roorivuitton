@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="resources/main/css/main-style2.css">
-    <style>
-    	
-    </style>
+    <link rel="stylesheet" href="resources/main/css/cctv.css">
     
     
 </head>
@@ -48,10 +44,7 @@
                     <a href="#">logo</a>
                 </div>
                 <div class="user-message">
-                	<c:if test="${!empty users}">
-                    <div class="user-name">${users.userName}관리자님 반갑습니다</div>
-                 	
-                 	
+                    <div class="user-name">관리자님 반갑습니다.</div>
                     <div class="user-info">
                         <div class="user-role">Manager</div>
                         <div class="dash">˙</div>
@@ -59,17 +52,11 @@
 
                     </div>
                     <div class="btn logout">
-                    	<form action="ELogout.do" method="get">                      
-                        <button >logout</button>                      
-                        </form>
-                	</div>
-                	
-                	
-                	</c:if>	
-            	</div>
-       		 </div>
+                        <a href="#">logout</a></div>    
+                </div>
+            </div>
+
         </div>
-       
 
 
     </header>
@@ -125,35 +112,43 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap-main">
-                <div class="main-cctv">
-                    <div class="main-title">CCTV</div>
+            <div class="wrap-main" id="cctv">
+                <div class="main-cctv">                    
+                    <div class="main-title">
+                        CCTV
+                        <select id="category" class="select">
+                            <option value="b1">새싹반</option>
+                            <option value="b2">병아리반</option>
+                            <option value="b3">반2</option>
+                            <option value="b4">반3</option>
+                                                
+                          </select>
+                    
+                    </div>
+                    
                     <div class="cctv-container">
-                        <fieldset>
+                        <fieldset id="b1">
                             <legend class="cctv-title">새싹반</legend>
-                            <video class="cctv-content" src="video/pexels-byron-sullivan-10672887.mp4" loop autoplay width="400px"></video>
-                        </fieldset>
-                        <fieldset>
+                            
+                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4" loop autoplay width="1200px" height="590px"></video>
+                        </fieldset >
+                        <fieldset id="b2" style="display:none">
                             <legend class="cctv-title">병아리반</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662929.mp4"   width="400px"></video>
+                            
+                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4" loop autoplay width="1200px" height="590px"></video>
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="b3" style="display:none">
                             <legend class="cctv-title">반2</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662934.mp4"  width="400px"></video>
+                            
+                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4" loop autoplay width="1200px" height="590px"></video>
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="b4" style="display:none">
                             <legend class="cctv-title">반3</legend>
-                            <video class="cctv-content" src="video/pexels-joseph-redfield-10662936.mp4" width="400px"></video>
+                            
+                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4" loop autoplay width="1200px" height="590px"></video>
                         </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반4</legend>
-                            <video class="cctv-content" src="video/pexels-kostas-exarhos-10654617.mp4"  width="400px"></video>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="cctv-title">반5</legend>
-                            <video class="cctv-content" src="video/pexels-mark-soetebier-10672177.mp4"  width="400px"></video>
-                        </fieldset>
-                        
+                      
+                      
                     </div>
                 </div>
             </div>
@@ -165,8 +160,60 @@
 
 </div>
 
-
 <script type="text/javascript" src="resources/main/js/jquery-3.6.0.js"></script>
+<script>
+
+
+$(document).ready(function(){
+	$('#category').on('change',function(){
+		if(this.value == 'b1'){
+			$("#"+this.value+"").css("display","block")
+			$('#b2').css("display", "none");
+			$('#b3').css("display", "none");
+			$('#b4').css("display", "none");
+			$('#b5').css("display", "none");
+			$('#b6').css("display", "none");	
+			alert(this.value);
+		}else if(this.value == 'b2'){
+			$("#"+this.value+"").css("display","block")
+			$('#b1').css("display", "none");
+			$('#b3').css("display", "none");
+			$('#b4').css("display", "none");
+			$('#b5').css("display", "none");
+			$('#b6').css("display", "none");
+			alert(this.value);
+		}else if(this.value == 'b3'){
+			$("#"+this.value+"").css("display","block")
+			$('#b1').css("display", "none");
+			$('#b2').css("display", "none");
+			$('#b4').css("display", "none");
+			$('#b5').css("display", "none");
+			$('#b6').css("display", "none");
+			alert(this.value);
+		}else if(this.value == 'b4'){
+			$("#"+this.value+"").css("display","block")
+			$('#b1').css("display", "none");
+			$('#b2').css("display", "none");
+			$('#b3').css("display", "none");
+			$('#b5').css("display", "none");
+			$('#b6').css("display", "none");
+			alert(this.value);
+		}
+		
+		
+		
+	});
+});
+
+
+</script>
+
+
+
+
+
+
+
 
 
 

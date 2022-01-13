@@ -374,9 +374,56 @@ create table member(
 	userSex varchar(10) not null default 0,
 	userPhone varchar(20) not null,
 	modelNumber varchar(20) not null,
-	primary key(userId)
+	constraint member_id_pk PRIMARY KEY (userId)   
 );
 
+
+create table image(
+	img_no int not null auto_increment,
+	img_file varchar(200) not null,
+	img_time datetime not null default now(),
+	img_type varchar(20) not null,
+	primary key(img_no)
+)
+
+create table cctv(
+	cctv_no int unsigned not null auto_increment,
+	cctv_serial varchar(20) not null,
+	cctv_location varchar(200) not null,
+	cctv_data datetime not null default now(),
+	cctv_total_user int not null,
+	
+	userId varchar(20) not null,
+	 constraint child_pk
+        Foreign key (userId)
+        references member(userId)
+        on delete cascade	
+	
+);
+
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face1.jpg','s1');
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face2.jpg','s1');
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face3.jpg','s1');
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face4.jpg','s2');
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face5.jpg','s2');
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face6.jpg','s3');
+insert into image(img_file,img_type)
+values('resources/main/images/faces/face7.jpg','s3');
+
+
+select * from image
+select * from cctv
+-- 
+
+-- 회사정보 --
+
+-- 
 
 insert into member(userId, userPwd, userEmail,userName,userBirth,userSex,userPhone,modelNumber)
 values('1','2','3','4','5','6','7','8');
