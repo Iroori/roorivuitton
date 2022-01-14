@@ -1,3 +1,7 @@
+<%@page import="kr.smhrd.domain.Cctv"%>
+<%@page import="kr.smhrd.domain.Image"%>
+<%@page import="java.util.List"%>
+<%@page import="kr.smhrd.service.BoardService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>      
@@ -22,9 +26,11 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
+    
+    
 </head>
 <body>
-    
+ 
 
 <div class="body_container">
     <!-- 사이드 메뉴 바 -->
@@ -118,32 +124,20 @@
                          <li>9시</li>
                          <li>10시</li>
                          <li>11시</li>
-                       </ul>
-                      
+                       </ul>                      
                    </li>
-                   <li>
-                    <a href="#n">1월 11일</a>                       
-                      <ul class="text_box">
-                        <li>9시</li>
-                        <li>10시</li>
-                        <li>11시</li>
-                      </ul>
-                     
-                  </li>
-                  <li>
-                    <a href="#n">1월 10일</a>                       
-                      <ul class="text_box">
-                        <li>9시</li>
-                        <li>10시</li>
-                        <li>11시</li>
-                      </ul>
-                     
-                  </li>
-                   
-                   
-
+                 
                  </ul>
+                 <c:forEach items="${list}" var="vo" varStatus="status">
+                 <div class="cut-lside">${vo.cctv_no}</div>              
+                 
+                 </c:forEach>
+                 
+                 
+                 
+                 
                 </div>
+                
                  
                 
                 
@@ -336,8 +330,6 @@
   } 
   </script>
   
-
-
 <script>
 $(document).ready(()=>{	
 	loadUlList();
@@ -350,35 +342,13 @@ function loadUlList(){
 		type : "get", 
 		
 		dataType: "json",  
-		success : resultHtml,
+		success : function(list){
+			console.log(list);
+		},
 		error : function(){
 			alert("error");
 		}		
 	});
-}
-function resultHtml(list){
-	
-	var view="";
-	$.each(list,function(index,obj){
-		
-		
-		
-	view="<input type='radio' name='accordion' id='answer"+index+"'>";
-	view+="<label for='answer"+index+"'>"
-	view+=list[index].cctv_location;
-	view+="</label>";		
-    view+="<div class='u"+index+"'>";    
-    
-    view+="<ul class='aco_list'>";
-    view+="<li class='day"+obj.cctv_no+"'>";    
-     
-    view+="</li>"; 
-    view+="</ul>";    
-    
-    view+="</div>";
-    $(".accordion").append(view);
-	});
-   
 }
 
 function loadTimeList(){
@@ -386,47 +356,17 @@ function loadTimeList(){
 		url : "timeAjaxList.do",
 		type : "get",
 		dataType: "json",
-		success : timeHtml,
+		success : function(list){
+			console.log(list);
+		},
 		error: function(){
 			alert("error!");
 		}		
 	});
 }
-
-function timeHtml(list){
-	console.log(list);
-	var biew="";
-	$.each(list,function(index,obj){		
-	
-		console.log(list[index].cctv_no);
-		console.log(list[index].img_time);
-		
-		
-		biew+="<a href='#n' >"+list[index].img_time+"</a>";
-		biew+="<ul class='text_box'>";
-		biew+="<li>9시</li>";
-		biew+="<li>10시</li>";
-		biew+="<li>11시</li>";
-		biew+="</ul>";
-		
-		
-	});
-	console.log(biew);
-	$(".day"+list[0].cctv_no+"").append(biew);
-}
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
+
+
 
 <script>
   $(function(){

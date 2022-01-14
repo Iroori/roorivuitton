@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.smhrd.domain.Board;
-
+import kr.smhrd.domain.Cctv;
+import kr.smhrd.domain.Image;
 import kr.smhrd.domain.User;
 
 import kr.smhrd.mapper.BoardMapper;
@@ -75,6 +76,19 @@ public class BoardService { // BoardController
 	        int cnt = mapper.idCheck(vo);
 	        return cnt;
 	    }
+		
+		public List<Cctv> ulAjaxList(){
+			List<Cctv> list= mapper.ulAjaxList();
+			return list;
+		};
+		
+		
+		
+		
+		public List<Image> timeAjaxList(){
+			List<Image> list1= mapper.timeAjaxList();
+			return list1;
+		};
 		
 	
 }
