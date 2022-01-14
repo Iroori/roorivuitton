@@ -8,7 +8,8 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import kr.smhrd.domain.Board;
-
+import kr.smhrd.domain.Cctv;
+import kr.smhrd.domain.Image;
 import kr.smhrd.domain.User;
 
 
@@ -64,6 +65,11 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	@Select("SELECT COUNT(user_id) FROM member WHERE user_id= #{user_id}")
 	public int idCheck(User vo);
 	
+	@Select("select * from cctv")
+	public List<Cctv> ulAjaxList();
 	
+	@Select("select * from image")
+	public List<Image> timeAjaxList();
+
 
 }

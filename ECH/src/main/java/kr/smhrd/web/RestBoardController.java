@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.smhrd.domain.Board;
-
+import kr.smhrd.domain.Cctv;
+import kr.smhrd.domain.Image;
 import kr.smhrd.domain.User;
 
 import kr.smhrd.service.BoardService;
@@ -79,9 +80,21 @@ public class RestBoardController {
 	        return cnt;
 	    }
 		
+		@GetMapping("/ulAjaxList.do")
+		public @ResponseBody List<Cctv> ulAjaxList(Model model) {
+			List<Cctv> list = service.ulAjaxList();
+			
+			return list;  
+		}
+		
+		@GetMapping("/timeAjaxList.do")
+		public @ResponseBody List<Image> timeAjaxList(Model model) {
+			List<Image> list1 = service.timeAjaxList();
+			
+			return list1;  
+		}
 		
 		
-	
 		
 
 }
