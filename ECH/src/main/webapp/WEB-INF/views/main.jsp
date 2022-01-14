@@ -65,7 +65,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link py-3 border-bottom" style="padding-top:1.5rem!important;
+            <a href="settings" class="nav-link py-3 border-bottom" style="padding-top:1.5rem!important;
             padding-bottom:1.5rem!important;"title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
                 <img class="bi" width="30" height="30" src="resources/admin/images/icon/gear-white.png">
             </a>
