@@ -93,7 +93,10 @@ public class RestBoardController {
 			
 			return list1;  
 		}
-		
+		@PostMapping("/setting.do")
+		public @ResponseBody void settingInsert(Cctv vo) { // userId, userPwd
+			service.settingInsert(vo);
+		}
 		
 		
 

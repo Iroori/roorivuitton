@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
@@ -99,6 +100,11 @@
             </div>
             <form action="setting.do" method="POST">
                 <div class="settings-form">
+                <c:if test="${!empty users}">
+                <input type="text" name="user_id" value="${users.user_id}">
+                	<input type="text" name="company_bno"  value="${users.company_bno}">
+                </c:if>
+                	
                     <input class= "settings-input-name" type="text" placeholder="장소명" name="cctv_location">
                     <input class= "settings-input-count" type="text" placeholder="적정 인원" name="cctv_total_user">
                     <input class= "settings-input-model" type="text" placeholder="모델 일련번호" name="cctv_serial">

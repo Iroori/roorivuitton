@@ -18,7 +18,10 @@
     insert into member (user_id,user_pwd,user_email,user_name,user_birth,user_sex,user_phone,company_bno)
     values(#{user_id},#{user_pwd},#{user_email},#{user_name},#{user_birth},#{user_sex},#{user_phone},#{company_bno})
   </insert>
- 
+<insert id="settingInsert" parameterType="kr.smhrd.domain.Board">
+    insert into cctv (cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+    values(#{cctv_serial},#{cctv_location},#{cctv_total_user},#{user_id},#{company_bno})
+  </insert> 
   
   
   

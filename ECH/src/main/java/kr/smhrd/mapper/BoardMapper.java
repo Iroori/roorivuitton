@@ -71,5 +71,5 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	@Select("select * from image")
 	public List<Image> timeAjaxList();
 
-
+	public Cctv settingInsert(Cctv vo);
 }

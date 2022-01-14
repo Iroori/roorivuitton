@@ -67,6 +67,7 @@ public class BoardService { // BoardController
 			return user;
 		}
 		
+		
 		public void join(User vo) {
 			mapper.join(vo);
 			
@@ -89,6 +90,9 @@ public class BoardService { // BoardController
 			List<Image> list1= mapper.timeAjaxList();
 			return list1;
 		};
-		
+		public void settingInsert(Cctv vo) {
+			mapper.settingInsert(vo);
+			
+		}
 	
 }
