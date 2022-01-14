@@ -60,9 +60,9 @@ public class BoardController {
 		}
 		
 		
-		@RequestMapping("/setting")
+		@RequestMapping("/settings")
 		public String setting() {
-			return "setting";
+			return "settings";
 		}
 		
 		@RequestMapping("/login")
