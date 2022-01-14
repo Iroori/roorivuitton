@@ -96,7 +96,14 @@ public class BoardController {
 		}
 		
 		
-		
+		@RequestMapping("/peoplecount.do")
+		   public String main(HttpServletRequest request) {
+		      String person = request.getParameter("person");
+		      String model_no = request.getParameter("model_no");
+		      System.out.println(person);
+		      System.out.println(model_no);
+		      return "peoplecount";
+		   }
 		
 	
 		
