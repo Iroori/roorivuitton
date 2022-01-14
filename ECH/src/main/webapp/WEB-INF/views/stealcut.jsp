@@ -129,7 +129,7 @@
                      
                   </li>
                   <li>
-                    <a href="#n">1월 10일</a>                       
+                    <a href="#n">1월 111일</a>                       
                       <ul class="text_box">
                         <li>9시</li>
                         <li>10시</li>
