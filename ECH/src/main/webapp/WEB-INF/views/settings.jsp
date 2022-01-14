@@ -97,7 +97,7 @@
                 <span class="settings-title2">적정 인원</span>
                 <span class="settings-title3">모델 일련번호</span>
             </div>
-            <form action="" method="POST">
+            <form action="setting.do" method="POST">
                 <div class="settings-form">
                     <input class= "settings-input-name" type="text" placeholder="장소명" name="cctv_location">
                     <input class= "settings-input-count" type="text" placeholder="적정 인원" name="cctv_total_user">
