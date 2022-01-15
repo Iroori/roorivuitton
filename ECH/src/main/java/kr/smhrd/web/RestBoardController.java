@@ -81,23 +81,30 @@ public class RestBoardController {
 	    }
 		
 		@GetMapping("/ulAjaxList.do")
-		public @ResponseBody List<Cctv> ulAjaxList(Model model) {
-			List<Cctv> list = service.ulAjaxList();
-			
+		public @ResponseBody List<Cctv> ulAjaxList(User vo,Model model) {
+			List<Cctv> list = service.ulAjaxList(vo);
+			String id = vo.getUser_id();
+			System.out.println(id);
+			model.addAttribute("list",list);			
 			return list;  
 		}
 		
 		@GetMapping("/timeAjaxList.do")
 		public @ResponseBody List<Image> timeAjaxList(Model model) {
-			List<Image> list1 = service.timeAjaxList();
-			
+			List<Image> list1 = service.timeAjaxList();		
+			model.addAttribute("list1",list1);
 			return list1;  
 		}
-		@PostMapping("/setting.do")
-		public @ResponseBody void settingInsert(Cctv vo) { // userId, userPwd
-			service.settingInsert(vo);
-		}
+	
 		
+		
+		@GetMapping("/imgAjaxList.do")
+		public @ResponseBody List<Image> imgAjaxList(int num,Model model) {
+			List<Image> list2 = service.imgAjaxList(num);
+			System.out.println(num);
+			model.addAttribute("list2",list2);
+			return list2;  
+		}
 		
 
 }

@@ -65,11 +65,18 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	@Select("SELECT COUNT(user_id) FROM member WHERE user_id= #{user_id}")
 	public int idCheck(User vo);
 	
-	@Select("select * from cctv")
-	public List<Cctv> ulAjaxList();
+	@Select("select * from cctv where user_id=#{user_id}")
+	public List<Cctv> ulAjaxList(User vo);
 	
 	@Select("select * from image")
 	public List<Image> timeAjaxList();
+	
+	// xml insert~
+		public void settingInsert(List<Cctv> list); 
+	 
+	 @Select("select img_no,img_file from image where img_no=#{num}")
+		public List<Image> imgAjaxList(int num);
+	
 
-	public Cctv settingInsert(Cctv vo);
+
 }

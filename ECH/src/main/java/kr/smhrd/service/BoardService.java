@@ -78,8 +78,10 @@ public class BoardService { // BoardController
 	        return cnt;
 	    }
 		
-		public List<Cctv> ulAjaxList(){
-			List<Cctv> list= mapper.ulAjaxList();
+		public List<Cctv> ulAjaxList(User vo){
+			List<Cctv> list= mapper.ulAjaxList(vo);
+			
+			
 			return list;
 		};
 		
@@ -90,9 +92,16 @@ public class BoardService { // BoardController
 			List<Image> list1= mapper.timeAjaxList();
 			return list1;
 		};
-		public void settingInsert(Cctv vo) {
-			mapper.settingInsert(vo);
+		
+		public void settingInsert(List<Cctv> list) {
 			
+			mapper.settingInsert(list);
 		}
+		
+		
+		public List<Image> imgAjaxList(int num){
+			List<Image> list1= mapper.imgAjaxList(num);
+			return list1;
+		};
 	
 }
