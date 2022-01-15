@@ -79,12 +79,16 @@
     <section class="section section-visual"> 
         <div class="wrap">
             <div class="user-menu">
-                <p>안녕하세요. 00님</p>
+            	<c:if test="${!empty users}">
+                <p>안녕하세요. ${users.user_name}님</p>
+                </c:if>                
                 <div class="side-line"></div>
                 <div class="dropdown">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                       <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                      <strong style="color:#333;margin-left:10px;">000님</strong>
+                      <c:if test="${!empty users}">               
+                      <strong style="color:#333;margin-left:10px;">${users.user_name}님</strong>
+                       </c:if>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                       <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -147,8 +151,7 @@
                  
                 
                 
-                 
-                  
+            
                   
                   
 
@@ -339,14 +342,21 @@
 
 
 <script>
-$(document).ready(()=>{	
+$(document).ready(()=>{
+	
 	loadUlList();
 	loadTimeList();
+	
 });
 
 function loadUlList(){
 	$.ajax({
-		url : "ulAjaxList.do", 
+		url : "ulAjaxList.do",
+		<c:if test="${!empty users}">
+		data : {
+			user_id : ${users.user_id}		
+		},
+		</c:if>
 		type : "get", 
 		
 		dataType: "json",  
@@ -360,30 +370,24 @@ function resultHtml(list){
 	
 	var view="";
 	$.each(list,function(index,obj){
-		
-		
-		
 	view="<input type='radio' name='accordion' id='answer"+index+"'>";
 	view+="<label for='answer"+index+"'>"
 	view+=list[index].cctv_location;
 	view+="</label>";		
-    view+="<div class='u"+index+"'>";    
-    
+    view+="<div class='u"+index+"'>";  
     view+="<ul class='aco_list'>";
-    view+="<li class='day"+obj.cctv_no+"'>";    
-     
+    view+="<li class='day"+obj.cctv_no+"'>";   
     view+="</li>"; 
     view+="</ul>";    
-    
     view+="</div>";
     $(".accordion").append(view);
 	});
-   
+	
+		
 }
-
-function loadTimeList(){
+function loadTimeList(){		
 	$.ajax({
-		url : "timeAjaxList.do",
+		url : "timeAjaxList.do",					
 		type : "get",
 		dataType: "json",
 		success : timeHtml,
@@ -392,38 +396,40 @@ function loadTimeList(){
 		}		
 	});
 }
-
 function timeHtml(list){
-	console.log(list);
-	var biew="";
-	$.each(list,function(index,obj){		
-	
-		console.log(list[index].cctv_no);
+	$.each(list,function(index,obj){
+		var biew="<a href='javascript:goDate("+list[index].img_no+")' >"+list[index].img_time.substring(5,10)+"</a>";
+		$(".day"+obj.cctv_no+"").append(biew);
+		console.log(obj.cctv_no);
 		console.log(list[index].img_time);
 		
 		
-		biew+="<a href='#n' >"+list[index].img_time+"</a>";
-		biew+="<ul class='text_box'>";
-		biew+="<li>9시</li>";
-		biew+="<li>10시</li>";
-		biew+="<li>11시</li>";
-		biew+="</ul>";
-		
-		
 	});
-	console.log(biew);
-	$(".day"+list[0].cctv_no+"").append(biew);
+	
 }
 
+function goDate(num){
+	$.ajax({
+		url : "imgAjaxList.do",
+		data : {"num": num},
+		type : "get",
+		dataType: "json",
+		success : imageHtml,
+		error: function(){
+			alert("error!!");
+		}		
+	});
+	
+}
+function imageHtml(list){	
+	$(".small").attr("src", list[0].img_file);
 
+	
+	console.log(list[0].img_file);
 
-
-
-
-
-
-
-
+	
+}
+ 
 
 
 </script>

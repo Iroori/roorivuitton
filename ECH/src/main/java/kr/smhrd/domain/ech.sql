@@ -32,7 +32,7 @@ create table image(
 	img_no int not null auto_increment,
 	cctv_no int not null,
 	img_file varchar(200) not null,
-	img_time datetime not null default now(),
+	img_time datetime not null default now(),	
 	img_type varchar(20) not null,
 	primary key(img_no)
 )
@@ -43,16 +43,33 @@ ALTER TABLE image
 
 
 
-insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_Bno)
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
 values('1','강의실','20','1','8');
 
-insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_Bno)
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
 values('2','강의실1','20','1','8');
 
-insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_Bno)
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
 values('3','강의실2','20','1','8');
-insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_Bno)
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
 values('4','강의실3','20','1','8');
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('115','강의실99','20','1','8');
+
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('5','강의실4','20','test','12345678');
+
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('5','강의실4','20','11','1');
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('5','강의실4','20','11','1');
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('5','강의실4','20','11','1');
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('5','강의실4','20','11','1');
+
+insert into cctv(cctv_serial,cctv_location,cctv_total_user,user_id,company_bno)
+values('5','7반','20','test1','777');
 
 insert into image(cctv_no,img_file,img_type)
 values('1','resources/main/images/faces/face1.jpg','s1');
@@ -64,6 +81,24 @@ insert into image(cctv_no,img_file,img_type)
 values('1','resources/main/images/faces/face4.jpg','s1');
 insert into image(cctv_no,img_file,img_type)
 values('5','resources/main/images/faces/face4.jpg','s1');
+insert into image(cctv_no,img_file,img_type)
+values('14','resources/main/images/faces/face1.jpg','s1');
+insert into image(cctv_no,img_file,img_type)
+values('14','resources/main/images/faces/face2.jpg','s1');
+insert into image(cctv_no,img_file,img_type,img_time)
+values('14','resources/main/images/faces/face3.jpg','s1','2021-01-01 10:10:10.0');
+insert into image(cctv_no,img_file,img_type,img_time)
+values('14','resources/main/images/faces/face3.jpg','s1','2021-01-02 10:10:10.0');
+insert into image(cctv_no,img_file,img_type,img_time)
+values('14','resources/main/images/faces/face3.jpg','s1','2021-01-02 10:10:10.0');
+insert into image(cctv_no,img_file,img_type,img_time)
+values('14','resources/main/images/faces/face3.jpg','s1','2021-01-03 10:10:10.0');
+
+
+insert into image(cctv_no,img_file,img_type)
+values('11','resources/main/images/faces/face4.jpg','s1');
+insert into image(cctv_no,img_file,img_type)
+values('11','resources/main/images/faces/face4.jpg','s1');
 
 insert into image(cctv_no,img_file,img_type,img_time)
 values('1','resources/main/images/faces/face1.jpg','s1','2021-01-01 10:10:10.0');
@@ -74,18 +109,26 @@ values('1','resources/main/images/faces/face3.jpg','s1','2021-01-01 10:10:10.0')
 insert into image(cctv_no,img_file,img_type,img_time)
 values('1','resources/main/images/faces/face4.jpg','s1','2021-01-01 10:10:10.0');
 insert into image(cctv_no,img_file,img_type,img_time)
-values('5','resources/main/images/faces/face4.jpg','s1','2021-01-01 10:10:10.0');
+values('5','resources/main/images/faces/face2.jpg','s1','2021-01-01 10:10:10.0');
 
 
 
+select * from cctv where user_id = 1;
+select * from image where cctv_no = 5;
 
+select date_format(img_time,'%Y-%m-%d') from image where cctv_no =5;
 
+select * from image where cctv
 
 select * from member;
 select * from cctv;
 select * from image;
 
+select img_no,img_file from image;
+select img_no,img_file from image where img_no=6;
+
 select now();
+select curdate();
 
 select @@global.time_zone, @@session.time_zone,@@system_time_zone;
 

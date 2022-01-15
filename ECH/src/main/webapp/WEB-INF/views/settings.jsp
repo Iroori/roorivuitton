@@ -14,24 +14,34 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <script>
-        
+    
+    
         $(document).ready(function(){
+        	<c:if test="${!empty users}">
             $(document).on("click", "button[name='btnplus']",
             function(){
                 console.log('야');
+                
                 $(".plus").remove();
                 $(".minus").remove();
                 $(".settings-input-name").css("margin-bottom","30px");
+                
+                $(".settings-form").append("<input type='hidden' name='user_id' value='${users.user_id}'>");
+                $(".settings-form").append("<input type='hidden' name='company_bno'  value='${users.company_bno}'>");
+                 
+				
+                
                 $(".settings-form").append("<input class= 'settings-input-name' type='text' placeholder='장소명' name='cctv_location'>");
                 $(".settings-form").append("<input class= 'settings-input-count' type='text' placeholder='적정 인원' name='cctv_total_user'>");
                 $(".settings-form").append("<input class= 'settings-input-model' type='text' placeholder='모델 일련번호' name='cctv_serial'>");
                 $(".settings-form").append("<button  id ='plusBtn' class='btnsettings plus' name='btnplus' type='button' >추가</button>");
                 $(".settings-form").append("<button  id='deleteBtn' class='btnsettings minus' type='button' >삭제</button>");
-                
+                        
                    
                    
                     
-            })
+            });
+            </c:if> 
         });
     </script>
 </head>
@@ -101,8 +111,8 @@
             <form action="setting.do" method="POST">
                 <div class="settings-form">
                 <c:if test="${!empty users}">
-                <input type="text" name="user_id" value="${users.user_id}">
-                	<input type="text" name="company_bno"  value="${users.company_bno}">
+                	<input type="hidden" name="user_id" value="${users.user_id}">
+                	<input type="hidden" name="company_bno"  value="${users.company_bno}">
                 </c:if>
                 	
                     <input class= "settings-input-name" type="text" placeholder="장소명" name="cctv_location">

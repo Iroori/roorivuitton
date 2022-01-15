@@ -107,6 +107,24 @@ public class BoardController {
 		      return "peoplecount";
 		   }
 		
+		@PostMapping("/setting.do")
+		public String settingInsert(Cctv cvo) {
+			//input name속성이 중복이라면 , 구분자를 기준으로 데이터가 하나로 묶여서 넘어온다.
+			String[] cctv_location = cvo.getCctv_location().split(",");
+			String[] cctv_total_user = cvo.getCctv_total_user().split(",");
+			String[] company_bno = cvo.getCompany_bno().split(",");
+			String[] user_id = cvo.getUser_id().split(",");
+			String[] cctv_serial = cvo.getCctv_serial().split(",");
+			List<Cctv> list = new ArrayList<Cctv>(); //업캐스팅
+			for (int i = 0; i < cctv_serial.length; i++) {
+				list.add(
+						new Cctv(0, cctv_serial[i], cctv_location[i], cctv_total_user[i], null, user_id[i], company_bno[i]));
+			}
+
+			service.settingInsert(list);
+			return "settings";
+		}
+		
 		
 		
 		
