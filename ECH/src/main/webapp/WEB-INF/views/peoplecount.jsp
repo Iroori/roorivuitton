@@ -9,7 +9,8 @@
     
     <link rel="stylesheet" href="resources/admin/css/basic.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
 </head>
 <body>
 	<div class="body_container">
@@ -32,7 +33,7 @@
 						class="bi" width="30" height="30"
 						src="resources/admin/images/icon/home-white.png">
 				</a></li>
-				<li><a href="#" class="nav-link py-3 border-bottom"
+				<li><a href="#" id="notification-icon" class="nav-link py-3 border-bottom"
 					style="padding-top: 1.5rem !important; padding-bottom: 1.5rem !important;"
 					title="" data-bs-toggle="tooltip" data-bs-placement="right"
 					data-bs-original-title="Dashboard"> <img class="bi" width="30"
@@ -78,7 +79,7 @@
 				</div>
 				<div class="chart-container">
 					<div class="content-chart">
-						<div class="chart" data-percent="55">
+						<div class="chart" data-percent="${person}">
 							<span class="title">55</span>
 						</div>
 
@@ -102,6 +103,57 @@
 					</div>
 
 				</div>
+				
+				<!--알림 new창 -->
+            <div class="notification-section" >
+                <h3>알림</h3>
+                <p>Notification</p>
+                <hr/>
+                
+
+                <div class="notification-content" >
+                    
+                    <div class="icon-section">
+                        <i class="fas fa-users" ></i>
+                    </div>
+                    <div class="notification-content-title">
+                        <h5 >[마스크 미착용자]</h5>
+                        <p style="float:left; font-size:17px;">6 강의장 </p>
+                        <p style="float: right; font-size:16px;">2022.01.17</p>    
+                    </div>
+
+                    <div class="notification-content-detail">
+                        <h5>내용</h5>
+                        <hr>
+                        <p>[마스크 미착용자]</p>
+                    </div>
+                    
+                    <hr/>
+                    
+                </div>
+
+                
+                <div class="notification-content" >
+                    
+                    <div class="icon-section">
+                        <i class="fas fa-users" ></i>
+                    </div>
+                    <div class="notification-content-title">
+                        <h5 style="font-weight: 600; font-size: 20px;
+                        padding-bottom:5px">[마스크 미착용자]</h5>
+                        <p style="float:left; font-size:17px;">6 강의장 </p>
+                        <p style="float: right; font-size:16px;">2022.01.17</p>    
+                    </div>
+                    
+                    <hr/>
+                    
+                </div>
+                              
+            </div> 
+				
+				
+				
+				
 			</div>
 			<!--script추가-->
 			<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
@@ -131,7 +183,32 @@
             });
         });
         </script>
-
+		<script>
+            // notification  알람 아이콘 클릭시
+            $(document).ready(function(){
+                $('#notification-icon').click(function(){
+                	if($('.notification-section').css('display')=='none'){
+                        $('.notification-section').show();
+                    }else{
+                        $('.notification-section').css('display','none');
+                    }
+                    
+                });
+            });
+    
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('.notification-content').click(function(){
+                    if($('.notification-content-detail').css('display')=='none'){
+                        $('.notification-content-detail').show();
+                    }else{
+                        $('.notification-content-detail').css('display','none');
+                    }
+                    
+                });
+            });
+        </script>
 
 		</section>
 	</div>
