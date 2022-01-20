@@ -118,14 +118,23 @@ select * from image where cctv_no = 5;
 
 select date_format(img_time,'%Y-%m-%d') from image where cctv_no =5;
 
-select * from image where cctv
+select * from image where cctv;
 
-select * from member;
+select * from member
 select * from cctv;
 select * from image;
+sekect 
+
+select * from message;
+select * from cctv where user_id='test';
+select cctv_total_user from cctv where cctv_serial=115
+
+select cctv_total_user,cctv_serial from cctv where user_id='test';
 
 select img_no,img_file from image;
 select img_no,img_file from image where img_no=6;
+
+
 
 select now();
 select curdate();
@@ -138,8 +147,11 @@ SET time_zone='+09:00';
 insert into member(user_Id, user_Pwd, user_Email,user_Name,user_Birth,user_Sex,user_Phone,company_Bno)
 values('1','2','3','4','5','6','7','8');
 
+alter table cctv add column cctv_cur_user int;
 
+update cctv set cctv_cur_user =100 where cctv_serial='smh02';
 
+select * from cctv;
 
 
 drop table member;

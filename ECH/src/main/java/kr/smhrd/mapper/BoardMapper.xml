@@ -25,9 +25,19 @@
     (#{item.cctv_serial},#{item.cctv_location},#{item.cctv_total_user},#{item.user_id},#{item.company_bno})
     </foreach> 
  </insert> 
+ 
+ <insert id="peopleMessage" parameterType="kr.smhrd.domain.Message">
+     insert into message (msg_content, msg_location,cctv_no,user_id,msg_type,msg_read)
+     values
+     (#{msg_content},#{msg_location},#{cctv_no},#{user_id},#{msg_type},#{msg_read})
+     
+     
+ </insert>
   
   
-
+<update id="updateJetson" parameterType="map" >
+    update cctv set cctv_cur_user =#{cctv_cur_user} where cctv_serial=#{cctv_serial}
+</update>
 
   
   

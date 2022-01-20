@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,20 +80,22 @@
 				</div>
 				<div class="chart-container">
 					<div class="content-chart">
-						<div class="chart" data-percent="${person}">
+						<div class="chart" data-percent="55">
 							<span class="title">55</span>
 						</div>
-
+						
 						<div class="people-count">
-							<h3>2 강의장</h3>
+						<c:forEach items="${clist}" var="test">
+							<h3>${test.cctv_location} </h3>
 							<p>설정 인원 : 20</p>
+						</c:forEach>
 							<button class="btn" type="button" onclick="">CCTV</button>
 						</div>
 					</div>
 
 					<div class="content-chart">
 						<div class="chart" data-percent="100">
-							<span class="title">초과</span>
+							<span class="title error">초과</span>
 						</div>
 
 						<div class="people-count">
@@ -118,7 +121,7 @@
                     </div>
                     <div class="notification-content-title">
                         <h5 >[마스크 미착용자]</h5>
-                        <p style="float:left; font-size:17px;">6 강의장 </p>
+                        <p style="float:left; font-size:17px;">6 강의장</p>
                         <p style="float: right; font-size:16px;">2022.01.17</p>    
                     </div>
 
@@ -155,6 +158,9 @@
 				
 				
 			</div>
+		</section>
+	</div>
+			
 			<!--script추가-->
 			<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 			<script
@@ -172,14 +178,14 @@
                 animate: 1000,
                 onStart: $.noop,
                 onStop: $.noop,
-                easing: 'easeOutBounce',
-                onStep: function(from, to, percent) {
-                    $(this.el).find('.percent').text(Math.round(percent));
-                }
+                // easing: 'easeOutBounce',
+                 onStep: function(from, to, percent) {
+                   $(this.el).find('.percent').text(Math.round(percent));
+                 }
             });
             var chart = window.chart = $('.chart').data('easyPieChart');
             $('.js_update').on('click', function() {
-                chart.update(Math.random()*200-100);
+               chart.update(Math.random()*200-100);
             });
         });
         </script>
@@ -200,7 +206,7 @@
         <script>
             $(document).ready(function(){
                 $('.notification-content').click(function(){
-                    if($('.notification-content-detail').css('display')=='none'){
+                    if($('.notification-content-detail').css('display'=='none')){
                         $('.notification-content-detail').show();
                     }else{
                         $('.notification-content-detail').css('display','none');
@@ -209,10 +215,134 @@
                 });
             });
         </script>
+        
+        <script>
+        $(document).ready(()=>{
+        	currentpeople();
+    	})
+    	// 이제  total_cur_user, total_user,model_serial 가져오기.
+    	function currentpeople(){
+    		   		
+    		        		
+    		$.ajax({
+    			url : 'currentpeople.do',
+    			<c:if test='${!empty users}'>
+				data : {
+				user_id : '${users.user_id}'		
+				},
+				</c:if>
+    			type : 'get',
+    			datatype : 'json',
+    			success: function comparePeople(data){
+    				console.log(data);
+    				for(var i =0; i<data.length; i++){
+    					var chart = window.chart = $('.chart').data('easyPieChart');
+    					
+    					if(data[i]['cctv_total_user']<data[i]['cctv_cur_user']){
+    						console.log('초과됐다!');
+    						
+    						// 초과시 db에 연결
+    						$.ajax({
+    							url:'peopleMessage.do',
+    							type:'get',
+    							data : {
+    								'msg_type':'p',
+    								'cctv_no': data[i]['cctv_no'],
+    								'cctv_location': data[i]['cctv_location'],
+    								'user_id': data[i]['user_id']
+    								
+    							},
+    							datatype:'json',
+    							success:function sendMessage(){
+									// flask 에 전송
+    						        $.ajax({
+    						          type : 'post',
+    						          url : 'http://119.206.175.167:5000/',
+    						          data : {"title":"[적정인원 초과]", "body":"적정인원이 초과되었습니다."},
+    						          dataType : 'json',
+    						          success : function() {
+    						         
+    						          },
+    						          error : function() {
 
-		</section>
-	</div>
+    						          }
+    						        })
+    						     },
+    							error:function(){
+    								console.log('메세지타입업데이트가 안디구ㅜ있억');
+    							}
+    						});
+    						
+    					     
+    					    
+    						
+    						
+    					}else if(data[i]['cctv_total_user']=data[i]['cctv_cur_user']){
+    						// 딱 맞을때
+    						chart.update(100);
+    					}else {
+    						chart.update(data[i]['cctv_cur_user']/data[i]['cctv_total_user']*100);
+    					}
+    				}
+    				//for(var i =0; i<data.length;i++){
+    				//	var selector = "#"+data[i]['cctv_serial'];
+    				//	var chart = window.chart = $(selector).data('easyPieChart');
+    				//	//$(selector + '>.title').text()
+    				//	chart.update(data[i]['cctv_cur_user']/data[i]['cctv_total_user']*100);
+    				//	if (data[i]['cctv_total_user'] < data[i]['cctv_cur_user'] ){
+    						
+    					  	// 휴대폰 알람 보내주는 flask에 비동기 요청(ajax)
+    				//		$.ajax()
+    						// 저희 db에 접근할 url에 비동기 요청
+    				//	  $.ajax()
+    				//	}
+    				//}
+    				
+    						
+    					},
+    			error: function(){
+					alert("에러야");
+				}
+    		});
+    	};
+    						
+    				
+    			
+    			
+    		
+    		
 
+        
+        	
+       //function loadUlList(){
+	//$.ajax({
+	//	url : "ulAjaxList.do",
+	//	<c:if test="${!empty users}">
+	//	data : {
+	//		user_id : ${users.user_id}		
+	//	},이부분  오호.네지금 아이디를 보냈어요 오호 네]
+	//	</c:if>
+	//	type : "get", 
+		
+	//	dataType: "json",  
+	//	success : resultHtml,
+	//	error : function(){
+	//		alert("error");
+	//	}		
+	//});
+//}
+        
+      //  function resultHtml(list){
+      //  	console.log(list);
+        	// jsp->controller-0>service->mapper.?...
+        						
+        
+        
+        
+        
+        </script>
+
+	
 
 
 </body>

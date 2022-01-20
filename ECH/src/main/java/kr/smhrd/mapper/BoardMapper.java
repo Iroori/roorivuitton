@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import kr.smhrd.domain.Board;
 import kr.smhrd.domain.Cctv;
 import kr.smhrd.domain.Image;
+import kr.smhrd.domain.Message;
 import kr.smhrd.domain.User;
 
 
@@ -68,6 +70,7 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	@Select("select * from cctv where user_id=#{user_id}")
 	public List<Cctv> ulAjaxList(User vo);
 	
+	
 	@Select("select * from image")
 	public List<Image> timeAjaxList();
 	
@@ -76,7 +79,25 @@ public interface BoardMapper { // interface BoardMapper <---> BoardMapper.xml (M
 	 
 	 @Select("select img_no,img_file from image where img_no=#{num}")
 		public List<Image> imgAjaxList(int num);
+	 
+	@Select("select cctv_total_user,cctv_serial from cctv where user_id=#{user_id}") 
+	public List<Cctv> selectPeople(User vo);
+	
+	// 적정인원관리
+	public void updateJetson(@Param("cctv_cur_user") int cctv_cur_user,@Param("cctv_serial")String cctv_serial);
+	
+	@Select("select * from cctv where user_id=#{user_id}")
+	public List<Cctv> selectcurrent(User user);
+	
+	public void peopleMessage(Message msg2);
+	
+	@Select("select * from cctv where user_id=#{user_id}")
+	public List<Cctv> showPeople(User user);
+	
 	
 
-
+	 // 이루리
+	 
+//	@Select("select cctv_total_user from cctv where cctv_serial=#{115}")
+//	public List<Cctv> selectPeople(List<Cctv> list);
 }

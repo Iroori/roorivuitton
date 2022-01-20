@@ -197,7 +197,9 @@
  function newPage()  {
   window.location.href = 'cctv';
 }
-</script>
+ 
+ 
+ </script>
     
 
 
